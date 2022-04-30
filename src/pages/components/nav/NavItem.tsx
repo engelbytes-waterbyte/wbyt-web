@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import type { NextPage } from "next";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { getEnvironmentData } from "worker_threads";
 import { Icon, News } from "tabler-icons-react";
 
@@ -10,19 +10,22 @@ type Props = {
   icon: React.ReactNode;
 };
 
-const Alink = styled.a`
-  font-size: 2em;
-  text-align: center;
-
-  cursor: pointer;
-`;
-
 const NavItem: NextPage<Props> = ({ name, href, icon }) => {
+  const Alink = styled.a`
+    /* font-size: 1.2em; */
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 20px;
+    color: ${(props) => router.asPath === href ? props.theme.colors.dunkelschwarz: props.theme.colors.waterblue};
+    cursor: pointer;
+  `;
+
   const router = useRouter();
-  const style = {
-    marginRight: 10,
-    color: router.asPath === href ? "red" : "black",
-  };
+  // const style = {
+  //   marginRight: 10,
+  //   // color: router.asPath === href ?  "red": "black",
+  //   // color: ${props => `${props.theme.color.dunkelschwarz}`}
+  // };
 
   const handleClick = (e: any) => {
     e.preventDefault();
@@ -30,7 +33,7 @@ const NavItem: NextPage<Props> = ({ name, href, icon }) => {
   };
 
   return (
-    <Alink onClick={() => router.push("/about")} style={style}>
+    <Alink onClick={() => router.push("/about")}>
       {icon}
 
       {name}
