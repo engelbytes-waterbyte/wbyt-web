@@ -5,10 +5,12 @@ import { StyledNav } from "../styles/Nav.styled";
 import NavItem from "./NavItem";
 import Logo from "../../../../assets/wbyt-norm-1024.svg";
 import styled from "styled-components";
+import { News } from 'tabler-icons-react';
+
 
 const StyledLogo = styled(Logo)`
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   
 `;
 
@@ -16,12 +18,12 @@ const NavBar: NextPage = () => {
   return (
     <StyledNav>
       <StyledLogo />
-      <NavItem name="Blog" href={"/"} />
-      <NavItem name="Projects" href={"/"} />
-      <NavItem name="Team" href={"/"} />
-      <NavItem name="Events" href={"/"} />
-      <NavItem name="Stickers" href={"/"} />
-      <NavItem name="Assets" href={"/"} />
+      <NavItem name="Blog" href={"/"} icon={<News size={48}/>}/>
+      <NavItem name="Projects" href={"/"} icon={<News size={48}/>}/>
+      <NavItem name="Team" href={"/"} icon={<News size={48}/>}/>
+      <NavItem name="Events" href={"/"} icon={<News size={48}/>}/>
+      <NavItem name="Stickers" href={"/"} icon={<News size={48}/>}/>
+      <NavItem name="Assets" href={"/"} icon={<News size={48}/>}/>
     </StyledNav>
   );
 };

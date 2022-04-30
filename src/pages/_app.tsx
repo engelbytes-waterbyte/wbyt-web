@@ -9,7 +9,9 @@ const wbytTheme = {
     buttonfill: '#022EC71A',
     buttonstroke: '#022EC74D',
     dunkelgrau: '#5E5E5E',
-    dunkelschwarz: '#000000'
+    dunkelschwarz: '#000000',
+    transparent: '#0000000',
+    white: '#fff'
   }
 }
 
