@@ -22,9 +22,10 @@ const StyledLogo = styled(Logo)`
 
 const NavItemGroup = styled.div`
   margin: 0 20px;
+  
 `
 
-const NavBar: NextPage = () => {
+const NavBar: React.FunctionComponent = () => {
   return (
     <StyledNav>
       <StyledLogo />

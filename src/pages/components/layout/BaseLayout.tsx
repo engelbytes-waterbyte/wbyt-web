@@ -4,10 +4,9 @@ import Image from "next/image";
 import styled from "styled-components";
 import NavBar from "../nav/NavBar";
 
-
 const BaseLayoutWrapper = styled.div`
   display: flex;
-`
+`;
 
 type Props = {
   children: React.ReactNode;

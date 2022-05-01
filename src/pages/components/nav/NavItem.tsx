@@ -16,6 +16,7 @@ const NavItem: NextPage<Props> = ({ name, href, icon }) => {
     text-align: center;
     font-family: 'Inter';
     font-size: 20px;
+    font-weight: 700;
     display: flex;
     align-items: center;
     color: ${(props) => router.asPath === href ? props.theme.colors.dunkelschwarz: props.theme.colors.waterblue};
