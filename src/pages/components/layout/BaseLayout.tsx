@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import styled from "styled-components";
 import NavBar from "../nav/NavBar";
+
+
+const BaseLayoutWrapper = styled.div`
+  display: flex;
+`
 
 type Props = {
   children: React.ReactNode;
@@ -9,10 +15,10 @@ type Props = {
 
 const BaseLayout: NextPage<Props> = ({ children }) => {
   return (
-    <nav>
+    <BaseLayoutWrapper>
       <NavBar />
       {children}
-    </nav>
+    </BaseLayoutWrapper>
   );
 };
 
