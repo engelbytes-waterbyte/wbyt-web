@@ -25,18 +25,14 @@ const StyledImage = styled(Image)`
 const ImageWrapper = styled.div`
   /* background-color: blue; */
   /* z-index: -2; */
-
   height: 100%;
   width: 100%;
   margin-left: auto;
   margin-right: 0;
-
-  /* position: relative; */
 `;
 
 const HomeSection = styled.section`
   height: 100vh;
-  /* flex: */
 `;
 
 const Home: NextPage = () => {
