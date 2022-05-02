@@ -15,8 +15,8 @@ const NavItem: NextPage<Props> = ({ name, href, icon }) => {
     /* font-size: 1.2em; */
     text-align: center;
     font-family: 'Inter';
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     display: flex;
     align-items: center;
     color: ${(props) => router.asPath === href ? props.theme.colors.dunkelschwarz: props.theme.colors.waterblue};
@@ -41,7 +41,6 @@ const NavItem: NextPage<Props> = ({ name, href, icon }) => {
   return (
     <Alink onClick={() => router.push("/about")}>
       {icon}
-
       {name}
     </Alink>
   );
