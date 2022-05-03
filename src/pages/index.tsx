@@ -83,7 +83,6 @@ const Home: NextPage = () => {
           largeText="Jaja was da los?"
           content="weil wir super sind"
         >
-          alsfj
         </AboutSectionLayout>
       </AboutSection>
     </HomeWrapper>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { ArrowDownCircle } from "tabler-icons-react";
 import TextLoop from "../utils/TextLoop";
+// import { TextLoop2 } from "../utils/TextAnimateByLetter";
 
 const SuggestorWrapper = styled.div`
   display: flex;
@@ -14,9 +15,21 @@ const SuggestorWrapper = styled.div`
   bottom: 10%;
   transform: translateX(-50%);
   position: absolute;
+  text-shadow: 0px 0px 20px white;
   * {
     margin: 20px;
   }
+`;
+
+const CrossedText = styled.span`
+  text-decoration: line-through;
+  display: inline;
+`;
+
+const UeberText = styled.span`
+  display: flex;
+  align-items: center;
+  margin: 0;
 `;
 
 const WbytNames = [
@@ -25,37 +38,23 @@ const WbytNames = [
   "die Jungspündler",
   "die Entwickler",
   "die Jova-Experten",
-  "die Voispostn",
+  // eslint-disable-next-line react/jsx-key
+  <CrossedText>die Sekte</CrossedText>,
 ];
 
 const Suggestor: React.FunctionComponent = () => {
   return (
     <SuggestorWrapper>
-      mehr erfahren
-      <br />
-      über{" "}
-      {/* <TextLoop
-        interval={10}
-        children={[
-          "Trade faster",
-          "Increase sales",
-          "Stock winners",
-          "Price perfectly",
-        ]}
-      /> */}
-      {/* {WbytNames.map((x) => {
-          return <div>{x}</div>;
-        })} */}
-      {/* <h5>asdfs</h5>
-        <h5>asddfs</h5>
-        <h5>asddfs</h5> */}
-      {/* </TextLoop> */}
-      <TextLoop>{WbytNames}</TextLoop>
+      <div>
+        Mehr erfahren
+        <br />
+        <UeberText>
+          über&nbsp;<TextLoop>{WbytNames}</TextLoop>
+        </UeberText>
+      </div>
       <ArrowDownCircle size={40} />
     </SuggestorWrapper>
   );
 };
-
-// const getRandomName = () =>}
 
 export default Suggestor;

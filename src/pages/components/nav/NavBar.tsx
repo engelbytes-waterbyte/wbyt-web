@@ -56,14 +56,26 @@ const NavBar: React.FunctionComponent = () => {
           href={"/"}
           icon={<Ambulance style={iconStyle} size={iconSize} />}
         />
-        <NavItem name="Team" href={"/"} icon={<Alien style={iconStyle} size={iconSize} />} />
-        <NavItem name="Events" href={"/"} icon={<Ticket style={iconStyle} size={iconSize} />} />
+        <NavItem
+          name="Team"
+          href={"/"}
+          icon={<Alien style={iconStyle} size={iconSize} />}
+        />
+        <NavItem
+          name="Events"
+          href={"/"}
+          icon={<Ticket style={iconStyle} size={iconSize} />}
+        />
         <NavItem
           name="Stickers"
           href={"/"}
           icon={<Sticker style={iconStyle} size={iconSize} />}
         />
-        <NavItem name="Assets" href={"/"} icon={<Package style={iconStyle} size={iconSize} />} />
+        <NavItem
+          name="Assets"
+          href={"/"}
+          icon={<Package style={iconStyle} size={iconSize} />}
+        />
         <NavItem
           name="Store"
           href={"/"}
