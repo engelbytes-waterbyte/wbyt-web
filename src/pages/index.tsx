@@ -5,8 +5,9 @@ import { useState } from "react";
 import styled from "styled-components";
 import styles from "../../styles/Home.module.css";
 import Footer from "./components/footer/Footer";
+import AboutSectionLayout from "./components/layout/AboutSectionLayout";
 import BaseLayout from "./components/layout/BaseLayout";
-import Suggestor from "./components/suggestor/Suggestor";
+import Suggestor from "./components/Suggestor";
 
 const HomeWrapper = styled.div`
   /* min-height: 100vh; */
@@ -32,6 +33,10 @@ const ImageWrapper = styled.div`
 `;
 
 const HomeSection = styled.section`
+  height: 100vh;
+`;
+
+const AboutSection = styled.section`
   height: 100vh;
 `;
 
@@ -72,6 +77,15 @@ const Home: NextPage = () => {
         </ImageWrapper>
         <Suggestor />
       </HomeSection>
+      <AboutSection>
+        <AboutSectionLayout
+          vertical="Wer?"
+          largeText="Jaja was da los?"
+          content="weil wir super sind"
+        >
+          alsfj
+        </AboutSectionLayout>
+      </AboutSection>
     </HomeWrapper>
   );
 };
