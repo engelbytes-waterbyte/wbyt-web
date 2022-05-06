@@ -27,11 +27,10 @@ const TextLoop: React.FC<Props> = ({ children }) => {
     gsap.to(textRef.current, 0.7, { yPercent: 0, autoAlpha: 1 });
   });
   var index = 0;
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       index++;
-      console.log(index % children.length);
       setText(children[index % children.length]);
     }, 2000);
     return () => clearInterval(interval);
