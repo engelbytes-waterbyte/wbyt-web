@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { ArrowDownCircle } from "tabler-icons-react";
 import TextLoop from "../utils/TextLoop";
-// import { TextLoop2 } from "../utils/TextAnimateByLetter";
 
 const SuggestorWrapper = styled.div`
   display: flex;
@@ -38,6 +37,18 @@ const WbytNames = [
   "die Jungspündler",
   "die Entwickler",
   "die Jova-Experten",
+  "die Diplomaten",
+  "die Coder",
+  "die Chillgruppe",
+  "die Genießer",
+  "die Designer",
+  "die Vereinigung",
+  "das Jungunternehmen",
+  "das Unicorn",
+  "der Internet-kolloss",
+  "die Stakeholder",
+  "die Chilllehrlinge",
+  "die Chillmeister",
   // eslint-disable-next-line react/jsx-key
   <CrossedText>die Sekte</CrossedText>,
 ];
@@ -49,7 +60,12 @@ const Suggestor: React.FunctionComponent = () => {
         Mehr erfahren
         <br />
         <UeberText>
-          über&nbsp;<TextLoop>{WbytNames}</TextLoop>
+          über&nbsp;
+          <TextLoop>
+            {WbytNames.map((value, index) => {
+              return <div key={index}>{value}</div>;
+            })}
+          </TextLoop>
         </UeberText>
       </div>
       <ArrowDownCircle size={40} />
