@@ -16,22 +16,31 @@ const SuggestorWrapper = styled.div`
   position: absolute;
   text-shadow: 0px 0px 20px white;
   * {
-    margin: 20px;
+    margin: 2px;
   }
 `;
 
 const CrossedText = styled.span`
   text-decoration: line-through;
   display: inline;
+  margin: 0;
 `;
 
 const UeberText = styled.span`
   display: flex;
   align-items: center;
+  margin-top: 5px;
+`;
+
+const BlankDiv = styled.div`
   margin: 0;
+  padding: 0;
+  display: inline;
 `;
 
 const WbytNames = [
+  // eslint-disable-next-line react/jsx-key
+  <CrossedText>die Sekte</CrossedText>,
   "die Gruppierung",
   "das Startup",
   "die Jungspündler",
@@ -49,21 +58,19 @@ const WbytNames = [
   "die Stakeholder",
   "die Chilllehrlinge",
   "die Chillmeister",
-  // eslint-disable-next-line react/jsx-key
-  <CrossedText>die Sekte</CrossedText>,
 ];
 
-const Suggestor: React.FunctionComponent = () => {
+const ScrollSuggestor: React.FunctionComponent = () => {
   return (
     <SuggestorWrapper>
-      <div>
+      <div style={{ marginBottom: "30px" }}>
         Mehr erfahren
         <br />
         <UeberText>
           über&nbsp;
           <TextLoop>
             {WbytNames.map((value, index) => {
-              return <div key={index}>{value}</div>;
+              return <BlankDiv key={index}>{value}</BlankDiv>;
             })}
           </TextLoop>
         </UeberText>
@@ -73,4 +80,4 @@ const Suggestor: React.FunctionComponent = () => {
   );
 };
 
-export default Suggestor;
+export default ScrollSuggestor;

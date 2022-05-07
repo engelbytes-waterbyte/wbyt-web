@@ -7,7 +7,7 @@ import styles from "@styles/Home.module.css";
 import Footer from "@components/footer/Footer";
 import AboutSectionLayout from "@components/layout/AboutSectionLayout";
 import BaseLayout from "@components/layout/BaseLayout";
-import Suggestor from "@components/Suggestor";
+import ScrollSuggestor from "@components/ScrollSuggestor";
 
 const HomeWrapper = styled.div`
   flex-grow: 1;
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
             objectFit="contain"
           />
         </ImageWrapper>
-        <Suggestor />
+        <ScrollSuggestor />
       </HomeSection>
       <AboutSection>
         <AboutSectionLayout
