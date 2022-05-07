@@ -46,7 +46,7 @@ const Home: NextPage = () => {
       <HomeSection>
         <ImageWrapper>
           <StyledImage
-            src="/EngelbyteAmCoden.png"
+            src="/images/EngelbyteAmCoden.png"
             layout="fill"
             objectFit="contain"
           />
