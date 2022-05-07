@@ -15,15 +15,13 @@ const HomeWrapper = styled.div`
 
 const StyledImage = styled(Image)`
   z-index: -1;
-  position: absolute;
-  left: 20px;
 `;
 
 const ImageWrapper = styled.div`
+  position: absolute;
   height: 100%;
-  width: 100%;
-  margin-left: auto;
-  margin-right: 0;
+  width: 800px;
+  right: 0;
 `;
 
 const HomeSection = styled.section`

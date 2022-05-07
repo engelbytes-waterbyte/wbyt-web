@@ -14,7 +14,7 @@ const SuggestorWrapper = styled.div`
   bottom: 10%;
   transform: translateX(-50%);
   position: absolute;
-  text-shadow: 0px 0px 20px white;
+  text-shadow: 0px 0px 20px #ffffff;
   * {
     margin: 2px;
   }
