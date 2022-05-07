@@ -3,11 +3,11 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import styled from "styled-components";
-import styles from "../../styles/Home.module.css";
-import Footer from "./components/footer/Footer";
-import AboutSectionLayout from "./components/layout/AboutSectionLayout";
-import BaseLayout from "./components/layout/BaseLayout";
-import Suggestor from "./components/Suggestor";
+import styles from "@styles/Home.module.css";
+import Footer from "@components/footer/Footer";
+import AboutSectionLayout from "@components/layout/AboutSectionLayout";
+import BaseLayout from "@components/layout/BaseLayout";
+import Suggestor from "@components/Suggestor";
 
 const HomeWrapper = styled.div`
   flex-grow: 1;

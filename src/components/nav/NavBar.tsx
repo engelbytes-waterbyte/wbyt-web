@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { StyledNav } from "../styles/Nav.styled";
+import { StyledNav } from "@styles/Nav.styled";
 import NavItem from "./NavItem";
-import Logo from "../../../../assets/wbyt-norm-tight.svg";
+import Logo from "@assets/logos/wbyt-norm-tight.svg";
 import styled from "styled-components";
 import {
   News,
@@ -29,15 +29,6 @@ const NavItemGroup = styled.div`
 const iconStyle = {
   strokeWidth: iconStrokeWidth,
 };
-
-const StyledNewsIcon = styled(News)`
-  stroke-width: ${iconStrokeWidth};
-
-  /* path{
-    stroke-width: 3px;
-    
-  } */
-`;
 
 const NavBar: React.FunctionComponent = () => {
   const iconSize = 20;

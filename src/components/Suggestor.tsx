@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ArrowDownCircle } from "tabler-icons-react";
-import TextLoop from "../utils/TextLoop";
+import TextLoop from "@components/utils/TextLoop";
 
 const SuggestorWrapper = styled.div`
   display: flex;
