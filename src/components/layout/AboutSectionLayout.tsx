@@ -8,6 +8,13 @@ const AboutSectionLayoutWrapper = styled.div`
   display: flex;
 `;
 
+const VerticalTextOnTheSide = styled.div`
+  /* background-color: blue; */
+  color: ${(props) => props.theme.colors.waterblue};
+  font-weight: 700;
+  transform: rotate(270deg);
+`;
+
 type Props = {
   children: React.ReactNode;
   vertical: string;
@@ -23,7 +30,7 @@ const BaseLayout: NextPage<Props> = ({
 }) => {
   return (
     <AboutSectionLayoutWrapper>
-      {vertical}
+      <VerticalTextOnTheSide>{vertical}</VerticalTextOnTheSide>
       {largeText}
       {content}
       {children}

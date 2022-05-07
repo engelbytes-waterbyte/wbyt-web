@@ -16,7 +16,7 @@ const Alink = styled.a<{ router: NextRouter; href: string }>`
   display: flex;
   align-items: center;
   color: ${(props) =>
-    props.router.asPath === props.href
+    props.router.asPath !== props.href
       ? props.theme.colors.dunkelschwarz
       : props.theme.colors.waterblue};
   cursor: pointer;

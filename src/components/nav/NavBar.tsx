@@ -14,6 +14,7 @@ import {
   Package,
   BuildingStore,
 } from "tabler-icons-react";
+import { useRouter } from "next/router";
 
 const iconStrokeWidth = "10%";
 
@@ -31,7 +32,12 @@ const iconStyle = {
 };
 
 const NavBar: React.FunctionComponent = () => {
+  const router = useRouter();
   const iconSize = 20;
+  const gehHam = (e: any) => {
+    e.preventDefault();
+    router.push("/");
+  };
 
   return (
     <StyledNav>
@@ -39,37 +45,37 @@ const NavBar: React.FunctionComponent = () => {
       <NavItemGroup>
         <NavItem
           name="Blog"
-          href={"/"}
+          href={"/blog"}
           icon={<News style={iconStyle} size={iconSize} />}
         />
         <NavItem
           name="Projects"
-          href={"/"}
+          href={"/projects"}
           icon={<Ambulance style={iconStyle} size={iconSize} />}
         />
         <NavItem
           name="Team"
-          href={"/"}
+          href={"/team"}
           icon={<Alien style={iconStyle} size={iconSize} />}
         />
         <NavItem
           name="Events"
-          href={"/"}
+          href={"/events"}
           icon={<Ticket style={iconStyle} size={iconSize} />}
         />
         <NavItem
           name="Stickers"
-          href={"/"}
+          href={"/stickers"}
           icon={<Sticker style={iconStyle} size={iconSize} />}
         />
         <NavItem
           name="Assets"
-          href={"/"}
+          href={"/assets"}
           icon={<Package style={iconStyle} size={iconSize} />}
         />
         <NavItem
           name="Store"
-          href={"/"}
+          href={"/store"}
           icon={<BuildingStore style={iconStyle} size={iconSize} />}
         />
       </NavItemGroup>
