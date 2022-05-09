@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { ArrowDownCircle } from "tabler-icons-react";
 import TextLoop from "@components/utils/TextLoop";
+import { iconStyle } from "@styles/Globals";
 
 const SuggestorWrapper = styled.div`
   display: flex;
@@ -75,7 +76,7 @@ const ScrollSuggestor: React.FunctionComponent = () => {
           </TextLoop>
         </UeberText>
       </div>
-      <ArrowDownCircle size={40} />
+      <ArrowDownCircle size={40} style={iconStyle} />
     </SuggestorWrapper>
   );
 };

@@ -41,7 +41,9 @@ const NavBar: React.FunctionComponent = () => {
 
   return (
     <StyledNav>
-      <StyledLogo />
+      <a href="" onClick={gehHam}>
+        <StyledLogo />
+      </a>
       <NavItemGroup>
         <NavItem
           name="Blog"

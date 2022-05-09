@@ -6,7 +6,7 @@ import styled from "styled-components";
 import styles from "@styles/Home.module.css";
 import Footer from "@components/footer/Footer";
 import AboutSectionLayout from "@components/layout/AboutSectionLayout";
-import BaseLayout from "@components/layout/BaseLayout";
+import HomeLayout from "@components/layout/BaseLayout";
 import ScrollSuggestor from "@components/ScrollSuggestor";
 
 const HomeWrapper = styled.div`
@@ -33,7 +33,6 @@ const AboutSection = styled.section`
 `;
 
 const Home: NextPage = () => {
-  const [ratio, setRatio] = useState(16 / 9);
   return <div>adsf</div>;
 };
 

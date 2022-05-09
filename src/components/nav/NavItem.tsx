@@ -1,6 +1,7 @@
 import { NextRouter, useRouter } from "next/router";
 import type { NextPage } from "next";
 import styled, { ThemeProvider } from "styled-components";
+import { iconStyle } from "@styles/Globals";
 
 type Props = {
   name: string;
@@ -31,9 +32,10 @@ const NavItem: NextPage<Props> = ({ name, href, icon }) => {
     e.preventDefault();
     router.push(href);
   };
+  
 
   return (
-    <Alink router={router} href={href} onClick={handleClick}>
+    <Alink router={router} href={href} onClick={handleClick} >
       {icon}
       {name}
     </Alink>

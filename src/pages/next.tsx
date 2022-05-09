@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@styles/Home.module.css";
-import BaseLayout from "../components/layout/BaseLayout";
+import HomeLayout from "../components/layout/BaseLayout";
 
 const Home: NextPage = () => {
   return (
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <BaseLayout>
+      <HomeLayout>
         <main className={styles.main}>
           <h1 className={styles.title}>
             Welcome to <a href="https://nextjs.org">Next.js!</a>
@@ -64,7 +64,7 @@ const Home: NextPage = () => {
             </a>
           </div>
         </main>
-      </BaseLayout>
+      </HomeLayout>
 
       <footer className={styles.footer}>
         <a

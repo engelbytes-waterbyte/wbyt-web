@@ -4,15 +4,33 @@ import Image from "next/image";
 import styled from "styled-components";
 import NavBar from "../nav/NavBar";
 
-const AboutSectionLayoutWrapper = styled.div`
+const AboutSectionLayoutWrapper = styled.section`
   display: flex;
+  flex-direction: column;
+
+  margin: 30px;
+`;
+
+const AboutSectionTextWrapper = styled.div`
+  display: flex;
+  height: 300px;
 `;
 
 const VerticalTextOnTheSide = styled.div`
   /* background-color: blue; */
   color: ${(props) => props.theme.colors.waterblue};
-  font-weight: 700;
-  transform: rotate(270deg);
+  font-size: 100px;
+  font-weight: 900;
+  margin: 0;
+  transform: rotate(-90deg);
+`;
+
+const VerticalTextWrapper = styled.div`
+  width: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 type Props = {
@@ -30,9 +48,15 @@ const BaseLayout: NextPage<Props> = ({
 }) => {
   return (
     <AboutSectionLayoutWrapper>
-      <VerticalTextOnTheSide>{vertical}</VerticalTextOnTheSide>
-      {largeText}
-      {content}
+      <AboutSectionTextWrapper>
+        <VerticalTextWrapper>
+          <VerticalTextOnTheSide>{vertical}</VerticalTextOnTheSide>
+        </VerticalTextWrapper>
+        <div>
+          <h1>{largeText}</h1>
+          <p>{content}</p>
+        </div>
+      </AboutSectionTextWrapper>
       {children}
     </AboutSectionLayoutWrapper>
   );
