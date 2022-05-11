@@ -25,6 +25,15 @@ const VerticalTextOnTheSide = styled.div`
   transform: rotate(-90deg);
 `;
 
+const ContentContainer = styled.div`
+  /* background-color: blue; */
+  margin: 20px 40px;
+`;
+
+const ContentHeader = styled.h1`
+  font-size: 30px;
+`;
+
 const VerticalTextWrapper = styled.div`
   width: 100px;
   height: 100%;
@@ -52,10 +61,10 @@ const BaseLayout: NextPage<Props> = ({
         <VerticalTextWrapper>
           <VerticalTextOnTheSide>{vertical}</VerticalTextOnTheSide>
         </VerticalTextWrapper>
-        <div>
-          <h1>{largeText}</h1>
+        <ContentContainer>
+          <ContentHeader>{largeText}</ContentHeader>
           <p>{content}</p>
-        </div>
+        </ContentContainer>
       </AboutSectionTextWrapper>
       {children}
     </AboutSectionLayoutWrapper>

@@ -29,7 +29,8 @@ const HomeSection = styled.section`
 `;
 
 const AboutSection = styled.section`
-  height: 100vh;
+  height: fit-content;
+
 `;
 
 const Home: NextPage = () => {
@@ -59,6 +60,35 @@ const Home: NextPage = () => {
         <AboutSection>
           <AboutSectionLayout
             vertical="Wer?"
+            largeText="Entwicklungszentrale der hellsten Köpfe des Mittelmeerraums."
+            content="Aus jahrelanger Erfahrung in der selben Branche kristallisierten sich aus einer Gemenge von Schülern die dem Waterbyte Ideal einst am ehesten entsprachen eine Gruppierung von unglaublicher Einzigartigkeit."
+          >
+            animation
+          </AboutSectionLayout>
+          <AboutSectionLayout
+            vertical="Woher?"
+            largeText="Wo keimten die ersten Sprossen des Jungspundverbands?"
+            content="Die Lehranstalt Grieskirchen vereinte einst einen Haufen diverser von diversen Knaben von welchen sich wiederum eine handvoll mit Waterbyte identifizierten. "
+          >
+            animation
+          </AboutSectionLayout>
+          <AboutSectionLayout
+            vertical="Tätigkeit?"
+            largeText="Entwicklungszentrale der hellsten Köpfe des Mittelmeerraums."
+            content="Bei Waterbyte drehte sich einst alles um die Befriedigung unseres Vorgesetzten: Lehrer Gertsch! 
+            Eines Tages wurde sich jedoch dazu entschlossen sich aus der Dokumentations-handschelle zu befreien und frei Projekte in Angriff zu nehmen. Darauf entsprangen gleich die ersten Projekte welche sich durch grenzgeniale Kodierungsleistungen auszeichneten. Um dieses Potenzial aufrecht zu erhalten, definiert sich der Alltag bei Waterbyte auch durch die erstellung von Medien, welche Einerseits Einblicke in den Verein, aber auch externe Thematiken umfassen. Zu aktuellem Stand verfügen wir eine Blog-Infrastruktur, welche durch ein Sticker-arsenal und einen Store erweitert werden soll. Auch Events für die Zelebrierung der Gemeinschaft finden hohe Priorität in die Zeitplanung jedes Mitglieds. "
+          >
+            animation
+          </AboutSectionLayout>
+          <AboutSectionLayout
+            vertical="Strategie?"
+            largeText="Entwicklungszentrale der hellsten Köpfe des Mittelmeerraums."
+            content="Aus jahrelanger Erfahrung in der selben Branche kristallisierten sich aus einer Gemenge von Schülern die dem Waterbyte Ideal einst am ehesten entsprachen eine Gruppierung von unglaublicher Einzigartigkeit."
+          >
+            animation
+          </AboutSectionLayout>
+          <AboutSectionLayout
+            vertical="Kontakt!"
             largeText="Entwicklungszentrale der hellsten Köpfe des Mittelmeerraums."
             content="Aus jahrelanger Erfahrung in der selben Branche kristallisierten sich aus einer Gemenge von Schülern die dem Waterbyte Ideal einst am ehesten entsprachen eine Gruppierung von unglaublicher Einzigartigkeit."
           >
