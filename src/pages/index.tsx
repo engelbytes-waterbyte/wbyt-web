@@ -11,6 +11,8 @@ import ScrollSuggestor from "@components/ScrollSuggestor";
 import S2Origin from "@components/aboutSections/s2-origin";
 import S3Activities from "@components/aboutSections/s3-activities";
 import S1Foundation from "@components/aboutSections/s1-foundation";
+import S4Strategy from "@components/aboutSections/s4-strategy";
+import S5Contact from "@components/aboutSections/s5-contact";
 
 const HomeWrapper = styled.div`
   flex-grow: 1;
@@ -61,9 +63,10 @@ const Home: NextPage = () => {
 
         <AboutSection>
           <S1Foundation />
-          <S2Origin />
+          {/* <S2Origin /> */}
           <S3Activities />
-          {/* <S3Activities /> */}
+          <S4Strategy />
+          <S5Contact />
         </AboutSection>
       </HomeWrapper>
     </HomeLayout>

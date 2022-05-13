@@ -10,7 +10,6 @@ const DescriptionText = styled.div`
 `;
 const DescriptionContainer = styled.div`
   padding: 10px;
-  /* background-color: blue; */
   left: 50%;
   position: relative;
   width: fit-content;
@@ -28,9 +27,6 @@ const Heading = styled.h2`
 const CenterWrapper = styled.div`
   display: flex;
   justify-content: center;
-
-  /* flex-direction: column; */
-  /* background-color: red; */
   position: relative;
 `;
 
