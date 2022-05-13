@@ -3,3 +3,5 @@ declare module "../assets/*.svg" {
   const Component: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   export default Component;
 }
+
+declare module 'react-double-marquee';

@@ -31,7 +31,8 @@ const ContentContainer = styled.div`
 `;
 
 const ContentHeader = styled.h1`
-  font-size: 30px;
+  font-size: 2em;
+  margin: 10px 0px;
 `;
 
 const VerticalTextWrapper = styled.div`
@@ -41,6 +42,11 @@ const VerticalTextWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+const ContentParagraph = styled.p`
+  margin-left: 20px;
+  font-size: 1.2em;  
+`
 
 type Props = {
   children: React.ReactNode;
@@ -63,7 +69,7 @@ const BaseLayout: NextPage<Props> = ({
         </VerticalTextWrapper>
         <ContentContainer>
           <ContentHeader>{largeText}</ContentHeader>
-          <p>{content}</p>
+          <ContentParagraph>{content}</ContentParagraph>
         </ContentContainer>
       </AboutSectionTextWrapper>
       {children}
