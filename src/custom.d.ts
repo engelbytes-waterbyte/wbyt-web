@@ -5,3 +5,4 @@ declare module "../assets/*.svg" {
 }
 
 declare module 'react-double-marquee';
+declare module 'react-scroll';

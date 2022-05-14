@@ -13,6 +13,7 @@ import S3Activities from "@components/aboutSections/s3-activities";
 import S1Foundation from "@components/aboutSections/s1-foundation";
 import S4Strategy from "@components/aboutSections/s4-strategy";
 import S5Contact from "@components/aboutSections/s5-contact";
+import { Element } from "react-scroll";
 
 const HomeWrapper = styled.div`
   flex-grow: 1;
@@ -62,7 +63,9 @@ const Home: NextPage = () => {
         </Head>
 
         <AboutSection>
-          <S1Foundation />
+          <Element name="scrollToS1">
+            <S1Foundation />
+          </Element>
           {/* <S2Origin /> */}
           <S3Activities />
           <S4Strategy />

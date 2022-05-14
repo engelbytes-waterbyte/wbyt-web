@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { ArrowDownCircle } from "tabler-icons-react";
 import TextLoop from "@components/utils/TextLoop";
 import { iconStyle } from "@styles/globals";
+import { Link, scroller } from "react-scroll";
 
 const SuggestorWrapper = styled.div`
   display: flex;
@@ -61,6 +62,23 @@ const WbytNames = [
   "die Chillmeister",
 ];
 
+const StyledArrowDownCircle = styled(ArrowDownCircle)`
+  &:hover {
+    stroke: ${(props) => props.theme.colors.waterblue};
+    cursor: pointer;
+  }
+`;
+
+const scrollToS1 = () => {
+  scroller.scrollTo("myScrollToElement", {
+    duration: 1500,
+    delay: 100,
+    smooth: true,
+    containerId: "ContainerElementID",
+    offset: 50, // Scrolls to element + 50 pixels down the page
+  });
+};
+
 const ScrollSuggestor: React.FunctionComponent = () => {
   return (
     <SuggestorWrapper>
@@ -76,7 +94,21 @@ const ScrollSuggestor: React.FunctionComponent = () => {
           </TextLoop>
         </UeberText>
       </div>
-      <ArrowDownCircle size={40} style={iconStyle} />
+      <Link
+        activeClass="active"
+        className="test1"
+        to="scrollToS1"
+        spy={true}
+        smooth={true}
+        duration={500}
+        offset={-100}
+      >
+        <StyledArrowDownCircle
+          size={40}
+          style={iconStyle}
+          onClick={() => console.log("hello")}
+        />
+      </Link>
     </SuggestorWrapper>
   );
 };
