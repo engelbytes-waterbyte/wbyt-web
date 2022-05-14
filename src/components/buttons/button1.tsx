@@ -5,7 +5,7 @@ type Props = {
   icon: React.ReactNode;
 };
 
-const Wrapper = styled.button`
+const Wrapper = styled.a`
     background-color: ${(props) => props.theme.colors.waterblue};
     border-radius: 10px;
     height: 60px;
@@ -25,7 +25,7 @@ const Wrapper = styled.button`
 
 const Button1: React.FC<Props> = ({ name, icon }) => {
   return (
-    <Wrapper>
+    <Wrapper href="mailto:office@waterbyte.studio">
       {icon}
       {name}
     </Wrapper>

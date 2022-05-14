@@ -1,19 +1,60 @@
 import { StyledFooter } from "@styles/Footer.styled";
+import styled from "styled-components";
 
+const FooterHeader = styled.p`
+  font-size: 20px;
+`;
+
+const FooterSlogan = styled.p`
+  font-size: 40px;
+  margin: 0px;
+  font-weight: 700;
+`;
+
+const WaterblueFooterSlogan = styled(FooterSlogan)`
+  color: ${(props) => props.theme.colors.waterblue};
+`;
+
+const SloganWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  padding: 0;
+`;
 
 const Footer = () => {
   return (
     <StyledFooter>
-      <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by{" "}
-        {/* <span className={styles.logo}>
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </span> */}
-      </a>
+      <SloganWrapper>
+        <FooterSlogan>effektiv.</FooterSlogan>
+
+        <FooterSlogan>effizient.</FooterSlogan>
+
+        <FooterSlogan>engelbyte</FooterSlogan>
+
+        <WaterblueFooterSlogan>waterbyte.</WaterblueFooterSlogan>
+      </SloganWrapper>
+
+      <div>
+        <FooterHeader>Location</FooterHeader>
+        <p>Loremhausen 1</p>
+        <p>1234 Ipsumkirchen </p>
+        <p>Austria</p>
+      </div>
+
+      <div>
+        <FooterHeader>Contact</FooterHeader>
+        <p>+43 677 614 514 90</p>
+        <p>office@waterbyte.studio</p>
+        <p>Erreichbar? Meistens.</p>
+      </div>
+
+      <div>
+        <FooterHeader>Legal</FooterHeader>
+        <p>Imprint</p>
+        <p>Policies</p>
+        <p>Terms of Service</p>
+      </div>
     </StyledFooter>
   );
 };
