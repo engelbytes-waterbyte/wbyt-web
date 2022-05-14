@@ -103,11 +103,7 @@ const ScrollSuggestor: React.FunctionComponent = () => {
         duration={500}
         offset={-100}
       >
-        <StyledArrowDownCircle
-          size={40}
-          style={iconStyle}
-          onClick={() => console.log("hello")}
-        />
+        <StyledArrowDownCircle size={40} style={iconStyle} />
       </Link>
     </SuggestorWrapper>
   );
