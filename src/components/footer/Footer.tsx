@@ -1,5 +1,36 @@
 import { StyledFooter } from "@styles/Footer.styled";
 import styled from "styled-components";
+import LogoMono from "@assets/logos/wbyt-norm-tight-mono.svg";
+import {
+  BrandLinkedin,
+  BrandGithub,
+  BrandTwitter,
+  BrandYoutube,
+  BrandDribbble,
+} from "tabler-icons-react";
+
+const StyledLogoMono = styled(LogoMono)`
+  width: 240px;
+  height: 180px;
+`;
+
+const BrandContainer = styled.div`
+  display: flex;
+`;
+
+const UpperFooterSection = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0px 80px 0px;
+  width: 90%;
+`;
+
+const LowerFooterSection = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+`;
 
 const FooterHeader = styled.p`
   font-size: 20px;
@@ -22,39 +53,64 @@ const SloganWrapper = styled.div`
   padding: 0;
 `;
 
+const iconStrokeWidth = "10%";
+
+const iconStyle = {
+  strokeWidth: iconStrokeWidth,
+  margin: "10px",
+  width: "30px",
+  height: "30px",
+};
+
 const Footer = () => {
   return (
     <StyledFooter>
-      <SloganWrapper>
-        <FooterSlogan>effektiv.</FooterSlogan>
+      <UpperFooterSection>
+        <SloganWrapper>
+          <FooterSlogan>effektiv.</FooterSlogan>
 
-        <FooterSlogan>effizient.</FooterSlogan>
+          <FooterSlogan>effizient.</FooterSlogan>
 
-        <FooterSlogan>engelbyte</FooterSlogan>
+          <FooterSlogan>engelbyte</FooterSlogan>
 
-        <WaterblueFooterSlogan>waterbyte.</WaterblueFooterSlogan>
-      </SloganWrapper>
+          <WaterblueFooterSlogan>waterbyte.</WaterblueFooterSlogan>
+        </SloganWrapper>
 
-      <div>
-        <FooterHeader>Location</FooterHeader>
-        <p>Loremhausen 1</p>
-        <p>1234 Ipsumkirchen </p>
-        <p>Austria</p>
-      </div>
+        <div>
+          <FooterHeader>Location</FooterHeader>
+          <p>Loremhausen 1</p>
+          <p>1234 Ipsumkirchen </p>
+          <p>Austria</p>
+        </div>
 
-      <div>
-        <FooterHeader>Contact</FooterHeader>
-        <p>+43 677 614 514 90</p>
-        <p>office@waterbyte.studio</p>
-        <p>Erreichbar? Meistens.</p>
-      </div>
+        <div>
+          <FooterHeader>Contact</FooterHeader>
+          <p>+43 677 614 514 90</p>
+          <p>office@waterbyte.studio</p>
+          <p>Erreichbar? Meistens.</p>
+        </div>
 
-      <div>
-        <FooterHeader>Legal</FooterHeader>
-        <p>Imprint</p>
-        <p>Policies</p>
-        <p>Terms of Service</p>
-      </div>
+        <div>
+          <FooterHeader>Legal</FooterHeader>
+          <p>Imprint</p>
+          <p>Policies</p>
+          <p>Terms of Service</p>
+        </div>
+      </UpperFooterSection>
+      <LowerFooterSection>
+        <StyledLogoMono />
+
+        <BrandContainer>
+          {/* <a href="http://google.com">
+            <BrandDribbble style={iconStyle} />
+          </a> */}
+          <a href=""></a>
+          <BrandYoutube style={iconStyle} />
+          <BrandGithub style={iconStyle} />
+          <BrandLinkedin style={iconStyle} />
+          <BrandTwitter style={iconStyle} />
+        </BrandContainer>
+      </LowerFooterSection>
     </StyledFooter>
   );
 };

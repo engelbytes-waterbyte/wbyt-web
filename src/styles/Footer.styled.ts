@@ -10,4 +10,5 @@ export const StyledFooter = styled.footer`
   bottom: 10px;
   align-items: center;
   justify-content: space-around;
+  flex-direction: column;
 `;
