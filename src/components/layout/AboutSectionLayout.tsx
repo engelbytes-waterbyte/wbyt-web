@@ -13,7 +13,7 @@ const AboutSectionLayoutWrapper = styled.section`
 
 const AboutSectionTextWrapper = styled.div`
   display: flex;
-  height: 300px;
+  height: 400px;
 `;
 
 const VerticalTextOnTheSide = styled.div`
@@ -28,6 +28,7 @@ const VerticalTextOnTheSide = styled.div`
 const ContentContainer = styled.div`
   /* background-color: blue; */
   margin: 20px 40px;
+  height: fit-content;
 `;
 
 const ContentHeader = styled.h1`

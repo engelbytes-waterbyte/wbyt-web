@@ -25,6 +25,7 @@ const Heading = styled.h2`
 `;
 
 const CenterWrapper = styled.div`
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   position: relative;

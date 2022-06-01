@@ -63,7 +63,7 @@ const Home: NextPage = () => {
 
         <AboutSection>
           <S1Foundation />
-          {/* <S2Origin /> */}
+          <S2Origin />
           <S3Activities />
           <S4Strategy />
           <S5Contact />
