@@ -1,7 +1,7 @@
 import { NextRouter, useRouter } from "next/router";
 import type { NextPage } from "next";
 import styled, { ThemeProvider } from "styled-components";
-import { iconStyle } from "@styles/Globals";
+import { iconStyle } from "@styles/globals";
 
 type Props = {
   name: string;
