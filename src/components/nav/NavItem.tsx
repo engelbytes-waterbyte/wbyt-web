@@ -1,4 +1,5 @@
 import { NextRouter, useRouter } from "next/router";
+// import Link from "next/link";
 import type { NextPage } from "next";
 import styled, { ThemeProvider } from "styled-components";
 import { iconStyle } from "@styles/globals";
@@ -29,13 +30,12 @@ const Alink = styled.a<{ router: NextRouter; href: string }>`
 const NavItem: NextPage<Props> = ({ name, href, icon }) => {
   const router = useRouter();
   const handleClick = (e: any) => {
+    console.log("jasdlkf");
     e.preventDefault();
     router.push(href);
   };
-  
-
   return (
-    <Alink router={router} href={href} onClick={handleClick} >
+    <Alink router={router} href={href} onClick={handleClick}>
       {icon}
       {name}
     </Alink>

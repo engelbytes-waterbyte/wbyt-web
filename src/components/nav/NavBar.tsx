@@ -21,10 +21,16 @@ const iconStrokeWidth = "10%";
 const StyledLogo = styled(Logo)`
   width: 240px;
   height: 180px;
+  cursor: pointer;
+`;
+
+const StyledLogoWrapper = styled.div`
+  z-index: 40;
 `;
 
 const NavItemGroup = styled.div`
   margin: 0 20px;
+  z-index: 20;
 `;
 
 const iconStyle = {
@@ -35,15 +41,16 @@ const NavBar: React.FunctionComponent = () => {
   const router = useRouter();
   const iconSize = 20;
   const gehHam = (e: any) => {
+    console.log("ajsdlf");
     e.preventDefault();
     router.push("/");
   };
 
   return (
     <StyledNav>
-      <a href="" onClick={gehHam}>
+      <StyledLogoWrapper onClick={gehHam}>
         <StyledLogo />
-      </a>
+      </StyledLogoWrapper>
       <NavItemGroup>
         <NavItem
           name="Blog"
