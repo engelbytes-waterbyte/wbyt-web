@@ -5,4 +5,5 @@ export const StyledNav = styled.nav`
   display: flex;
   flex-direction: column;
   margin-left: 40px;
+  min-height: 100vh;
 `;

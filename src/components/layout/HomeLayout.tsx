@@ -15,8 +15,12 @@ const HomeTopLayoutWrapper = styled.div`
 
 type Props = {
   topSection: React.ReactNode;
-  children: React.ReactNode;  
+  children: React.ReactNode;
 };
+
+/*
+Layout only for the landing page - representative page
+*/
 
 const HomeLayout: NextPage<Props> = ({ topSection, children }) => {
   return (

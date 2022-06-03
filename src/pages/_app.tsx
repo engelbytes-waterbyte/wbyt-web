@@ -1,8 +1,10 @@
 import "@styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
-import HomeLayout from "@components/layout/BaseLayout";
 import Footer from "@components/footer/Footer";
+import AboutSectionLayout from "@components/layout/AboutSectionLayout";
+import { useRouter } from "next/router";
+import BaseLayout from "@components/layout/BaseLayout";
 
 // color codes for transparency in hex: https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4
 const wbytTheme = {
@@ -19,10 +21,19 @@ const wbytTheme = {
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   return (
     <ThemeProvider theme={wbytTheme}>
       <>
-        <Component {...pageProps} />
+        {router.pathname != "/" ? (
+          <BaseLayout>
+            <Component {...pageProps} />
+          </BaseLayout>
+        ) : (
+          <Component {...pageProps} />
+        )}
+
         <Footer />
       </>
     </ThemeProvider>

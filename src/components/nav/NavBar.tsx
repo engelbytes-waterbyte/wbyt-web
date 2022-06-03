@@ -19,7 +19,7 @@ import { useRouter } from "next/router";
 const iconStrokeWidth = "10%";
 
 const StyledLogo = styled(Logo)`
-  width: 240px;
+  width: 200px;
   height: 180px;
   cursor: pointer;
 `;
@@ -37,11 +37,14 @@ const iconStyle = {
   strokeWidth: iconStrokeWidth,
 };
 
-const NavBar: React.FunctionComponent = () => {
+interface NavBarProps {
+  isTight?: boolean;
+}
+
+const NavBar: React.FunctionComponent<NavBarProps> = ({ isTight }) => {
   const router = useRouter();
   const iconSize = 20;
   const gehHam = (e: any) => {
-    console.log("ajsdlf");
     e.preventDefault();
     router.push("/");
   };
@@ -51,6 +54,7 @@ const NavBar: React.FunctionComponent = () => {
       <StyledLogoWrapper onClick={gehHam}>
         <StyledLogo />
       </StyledLogoWrapper>
+
       <NavItemGroup>
         <NavItem
           name="Blog"

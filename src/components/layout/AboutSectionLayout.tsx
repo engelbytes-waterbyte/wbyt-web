@@ -56,7 +56,7 @@ type Props = {
   content: string;
 };
 
-const BaseLayout: NextPage<Props> = ({
+const AboutSectionLayout: NextPage<Props> = ({
   children,
   vertical,
   largeText,
@@ -78,4 +78,4 @@ const BaseLayout: NextPage<Props> = ({
   );
 };
 
-export default BaseLayout;
+export default AboutSectionLayout;
