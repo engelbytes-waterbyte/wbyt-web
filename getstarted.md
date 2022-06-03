@@ -1,5 +1,6 @@
-# getstarted
+# Run the Project
 
-```npm install```
+okletsgo:
+`npm install`
 
-```npm run dev```
+`npm run dev`

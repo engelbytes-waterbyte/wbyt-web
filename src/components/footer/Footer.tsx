@@ -86,7 +86,7 @@ const Footer = () => {
         <div>
           <FooterHeader>Contact</FooterHeader>
           <p>+43 677 614 514 90</p>
-          <p>office@waterbyte.studio</p>
+          <p>contact@waterbyte.studio</p>
           <p>Erreichbar? Meistens.</p>
         </div>
 

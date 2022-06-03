@@ -25,7 +25,7 @@ const Wrapper = styled.a`
 
 const Button1: React.FC<Props> = ({ name, icon }) => {
   return (
-    <Wrapper href="mailto:office@waterbyte.studio">
+    <Wrapper href="mailto:contact@waterbyte.studio">
       {icon}
       {name}
     </Wrapper>

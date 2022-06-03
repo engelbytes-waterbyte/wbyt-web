@@ -20,7 +20,7 @@ const S5Contact = () => {
       content="Waterbyte wäre nicht dort wo es jetzt ist ohne seine zahlreichen Partner und Freunde. Jetzt liegt es nur noch an ihnen den letzten Schritt zu wagen und mit uns in Kontakt zu treten. Wir werden uns allen ihren Wünschen widmen und jene in Realität umsetzen zu welchen wir uns bemächtigt fühlen. "
     >
       <CenterWrapper>
-        <h3>office@waterbyte.studio</h3>
+        <h3>contact@waterbyte.studio</h3>
         <RefArr5 />
         <Button1 name="Mail schreiben" icon={<Mail></Mail>} />
       </CenterWrapper>
