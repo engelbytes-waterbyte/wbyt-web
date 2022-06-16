@@ -2,7 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
-import NavBar from "../nav/NavBar";
+import NavBar from "@components/nav/NavBar";
+import TopBar from "@components/layout/TopBar";
 
 const HomeLayoutWrapper = styled.div`
   display: flex;
@@ -27,6 +28,7 @@ const HomeLayout: NextPage<Props> = ({ topSection, children }) => {
     <HomeLayoutWrapper>
       <HomeTopLayoutWrapper>
         <NavBar />
+        <TopBar heading={""} subheading={""} />
         {topSection}
       </HomeTopLayoutWrapper>
       {children}
