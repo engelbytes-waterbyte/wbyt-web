@@ -61,7 +61,7 @@ const NavBar: React.FunctionComponent<NavBarProps> = ({ isTight }) => {
           href={"/blog"}
           icon={<News style={iconStyle} size={iconSize} />}
         />
-        <NavItem
+        {/* <NavItem
           name="Projects"
           href={"/projects"}
           icon={<Ambulance style={iconStyle} size={iconSize} />}
@@ -90,7 +90,7 @@ const NavBar: React.FunctionComponent<NavBarProps> = ({ isTight }) => {
           name="Store"
           href={"/store"}
           icon={<BuildingStore style={iconStyle} size={iconSize} />}
-        />
+        /> */}
       </NavItemGroup>
     </StyledNav>
   );
