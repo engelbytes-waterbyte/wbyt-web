@@ -1,6 +1,6 @@
 import "@styles/globals.css";
 import type { AppProps } from "next/app";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Footer from "@components/footer/Footer";
 import AboutSectionLayout from "@components/layout/AboutSectionLayout";
 import { useRouter } from "next/router";
@@ -20,6 +20,10 @@ const wbytTheme = {
   },
 };
 
+const Upandstyle = styled.div`
+  background-color: red;
+`
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
@@ -33,8 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         ) : (
           <Component {...pageProps} />
         )}
-
-        <Footer />
+        {/* <Footer /> */}
       </>
     </ThemeProvider>
   );

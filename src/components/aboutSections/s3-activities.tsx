@@ -3,7 +3,7 @@ import Summit from "@assets/illustrations/summit.svg";
 import styled from "styled-components";
 const DescriptionText = styled.div`
   height: 200px;
-  width: 300px;
+  /* width: 300px; */
   font-size: 10px;
   text-align: center;
   margin: 10px;
@@ -12,7 +12,7 @@ const DescriptionContainer = styled.div`
   padding: 10px;
   left: 50%;
   position: relative;
-  width: fit-content;
+  /* width: fit-content; */
   transform: translate(-50%);
   display: flex;
   justify-content: center;
