@@ -34,6 +34,8 @@ const ContentContainer = styled.div`
 const ContentHeader = styled.h1`
   font-size: 2em;
   margin: 10px 0px;
+  background-color: green;
+  width: 10px;
 `;
 
 const VerticalTextWrapper = styled.div`

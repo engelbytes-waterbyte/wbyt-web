@@ -20,6 +20,9 @@ const SuggestorWrapper = styled.div`
   * {
     margin: 2px;
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const CrossedText = styled.span`
@@ -108,6 +111,5 @@ const ScrollSuggestor: React.FunctionComponent = () => {
     </SuggestorWrapper>
   );
 };
-
 
 export default ScrollSuggestor;

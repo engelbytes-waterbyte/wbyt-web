@@ -19,42 +19,13 @@ const HomeWrapper = styled.div`
   flex-grow: 1;
 `;
 
-const StyledImage = styled(Image)`
-  z-index: -1;
-`;
-
-const ImageWrapper = styled.div`
-  position: absolute;
-  height: 100%;
-  width: 800px;
-  right: 0;
-`;
-
-const HomeSection = styled.section`
-  height: 100vh;
-`;
-
 const AboutSection = styled.section`
   height: fit-content;
 `;
 
 const Home: NextPage = () => {
   return (
-    <HomeLayout
-      topSection={
-        <HomeSection>
-          <ImageWrapper>
-            <StyledImage
-              src="/images/EngelbyteAmCoden.png"
-              layout="fill"
-              priority={true}
-              objectFit="contain"
-            />
-          </ImageWrapper>
-          <ScrollSuggestor />
-        </HomeSection>
-      }
-    >
+    <HomeLayout>
       <HomeWrapper>
         <Head>
           <title>waterbyte</title>
@@ -63,13 +34,13 @@ const Home: NextPage = () => {
         </Head>
 
         <AboutSection>
-          <Element name="scrollToS1">
+          {/* <Element name="scrollToS1">
             <S1Foundation />
-          </Element>
+          </Element> */}
           {/* <S2Origin /> */}
-          <S3Activities />
+          {/* <S3Activities />
           <S4Strategy />
-          <S5Contact />
+          <S5Contact /> */}
         </AboutSection>
       </HomeWrapper>
     </HomeLayout>
