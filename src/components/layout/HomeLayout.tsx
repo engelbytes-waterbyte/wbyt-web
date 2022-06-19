@@ -48,7 +48,9 @@ const HomeLayout: NextPage<Props> = ({ children }) => {
         {/* <TopBar heading={""} subheading={""} /> */}
         <NavBar />{" "}
         {/*render different based on view - when too small only show nothing only react on responsiveness state change*/}
-        <TopBar heading={"Welcome to se"} subheading={" asdfasdf asdf asd a"} />
+        <TopBar
+          homeStyle={true}
+        />
         <HomeSection>
           <ImageWrapper>
             <StyledImage
