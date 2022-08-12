@@ -52,6 +52,7 @@ const TopBar: NextPage<Props> = ({ heading, subheading, homeStyle }) => {
         )}
       </HeadingsWrapper>
       <ButtonsWrapper>
+        <h1 className="text-3xl font-bold underline">Hello world!</h1>
         <WbytBtn text="Login" />
         <WbytBtn text="Mitglied werden" />
       </ButtonsWrapper>
