@@ -15,7 +15,6 @@ const BaseLayoutWrapper = styled.div`
 
 const ChildrenWrapper = styled.div`
   min-height: 100vh;
-  position: relative;
   flex: 1;
 `;
 
@@ -34,9 +33,9 @@ const BaseLayout: NextPage<Props> = ({ children, route }) => {
 
         <ChildrenWrapper>
           <TopBar
-            homeStyle={router.pathname=="/"}
-            heading={route?.heading??""}
-            subheading={route?.subheading??""}
+            homeStyle={router.pathname == "/"}
+            heading={route?.heading ?? ""}
+            subheading={route?.subheading ?? ""}
           />
           {children}
         </ChildrenWrapper>

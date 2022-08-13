@@ -6,58 +6,38 @@ import NavBar from "@components/nav/NavBar";
 import TopBar from "@components/layout/TopBar";
 import ScrollSuggestor from "@components/ScrollSuggestor";
 
-const HomeLayoutWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  height: fit-content;
-`;
-
-const HomeTopLayoutWrapper = styled.div`
-  display: flex;
-`;
-
 type Props = {
   children: React.ReactNode;
 };
 
-const HomeSection = styled.section`
-  height: 100vh;
-`;
-
-const StyledImage = styled(Image)`
-  z-index: -1;
-`;
-
 const ImageWrapper = styled.div`
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
   position: absolute;
   height: 100%;
   width: 800px;
   right: 0;
 `;
 
-/*
-Layout only for the landing page - representative page
-*/
-
 const HomeLayout: NextPage<Props> = ({ children }) => {
   return (
-    <HomeLayoutWrapper>
-      <HomeTopLayoutWrapper>
-        <HomeSection>
-          <ImageWrapper>
-            <StyledImage
-              src="/images/EngelbyteAmCoden.png"
-              layout="fill"
-              priority={true}
-              objectFit="contain"
-            />
-          </ImageWrapper>
-          <ScrollSuggestor />
-        </HomeSection>
-      </HomeTopLayoutWrapper>
+    <>
+      <ImageWrapper>
+        <Image
+          className="-z-1"
+          src="/images/EngelbyteAmCoden.png"
+          layout="fill"
+          priority={true}
+          objectFit="contain"
+        />
+      </ImageWrapper>
+
       {children}
-    </HomeLayoutWrapper>
+      <ScrollSuggestor />
+    </>
   );
 };
 

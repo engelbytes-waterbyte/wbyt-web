@@ -3,11 +3,12 @@ import { NextPage } from "next";
 import styled from "styled-components";
 
 const TopBarWrapper = styled.div<{ homeStyle: boolean }>`
-  width: 100%;
   height: 180px;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   z-index: 4;
   padding: 0 50px 0 0;
 
@@ -47,7 +48,7 @@ const TopBar: NextPage<Props> = ({ heading, subheading, homeStyle }) => {
   return (
     <TopBarWrapper
       homeStyle={homeStyle ?? false}
-      className={homeStyle ? "absolute" : "relative"}
+    
     >
       <HeadingsWrapper>
         {!homeStyle ? (

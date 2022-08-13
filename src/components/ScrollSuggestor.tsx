@@ -11,7 +11,6 @@ const SuggestorWrapper = styled.div`
   text-align: center;
   font-size: 1.4em;
   font-weight: 700;
-  position: absolute;
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
