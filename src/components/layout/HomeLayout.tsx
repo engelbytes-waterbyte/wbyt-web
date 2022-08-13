@@ -47,7 +47,6 @@ const HomeLayout: NextPage<Props> = ({ children }) => {
         {/* contains all content for landing */}
         {/* <TopBar heading={""} subheading={""} /> */}
         {/*render different based on view - when too small only show nothing only react on responsiveness state change*/}
-        <TopBar homeStyle={true} />
         <HomeSection>
           <ImageWrapper>
             <StyledImage

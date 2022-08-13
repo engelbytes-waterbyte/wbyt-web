@@ -3,13 +3,15 @@ import { NextPage } from "next";
 import styled from "styled-components";
 
 const TopBarWrapper = styled.div<{ homeStyle: boolean }>`
-  /* background-color: red; */
   width: 100%;
   height: 180px;
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   z-index: 4;
+  padding: 0 50px;
+
   margin-right: ${(props) => (props.homeStyle ? "50px" : "0px")};
   @media screen and (max-width: 768px) {
     display: none;
@@ -25,11 +27,14 @@ const ButtonsWrapper = styled.div`
 `;
 const TopBarHeading1 = styled.h1`
   font-size: 35px;
+  font-weight: 700;
   margin: 0;
 `;
 
 const TopBarHeading2 = styled.h2`
-  font-size: 20px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #4d4d4d;
   margin: 0;
 `;
 
@@ -41,7 +46,7 @@ interface Props {
 
 const TopBar: NextPage<Props> = ({ heading, subheading, homeStyle }) => {
   return (
-    <TopBarWrapper homeStyle={homeStyle ?? false}>
+    <TopBarWrapper homeStyle={homeStyle ?? false} className="">
       <HeadingsWrapper>
         {!homeStyle ? (
           <>
@@ -61,6 +66,7 @@ const TopBar: NextPage<Props> = ({ heading, subheading, homeStyle }) => {
           Login
         </button>
         <WbytBtn text="Mitglied werden" />
+          
       </ButtonsWrapper>
     </TopBarWrapper>
   );
