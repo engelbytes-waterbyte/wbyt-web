@@ -89,7 +89,7 @@ const S2Origin = () => {
       largeText="Wo keimten die ersten Sprossen des Jungspundverbands?"
       content="Die Lehranstalt Grieskirchen vereinte einst einen Haufen diverser von diversen Knaben von welchen sich wiederum eine handvoll mit Waterbyte identifizierten. "
     >
-      {/* <Marquee>
+      <Marquee>
         <Track>
           <Content>
             &nbsp;Infinite Marquee with long sentence Infinite Marquee with long
@@ -97,7 +97,7 @@ const S2Origin = () => {
             long sentence Infinite Marquee with long sentence
           </Content>
         </Track>
-      </Marquee> */}
+      </Marquee>
 
       <CenterWrapper>
         <CircleContainer>

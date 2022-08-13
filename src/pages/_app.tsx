@@ -6,8 +6,8 @@ import { useRouter } from "next/router";
 import BaseLayout from "@components/layout/BaseLayout";
 import "@styles/globals.css";
 import "tailwindcss/tailwind.css";
-// color codes for transparency in hex: https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4
-const wbytTheme = {
+
+export const wbytTheme = {
   colors: {
     waterblue: "#022EC7",
     buttonfill: "#022EC71A",
@@ -25,20 +25,11 @@ const Upandstyle = styled.div`
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-
   return (
     <ThemeProvider theme={wbytTheme}>
-      <>
-        {router.pathname != "/" ? (
-          <BaseLayout>
-            <Component {...pageProps} />
-          </BaseLayout>
-        ) : (
-          <Component {...pageProps} />
-        )}
-        {/* <Footer /> */}
-      </>
+      <BaseLayout>
+        <Component {...pageProps} />
+      </BaseLayout>
     </ThemeProvider>
   );
 }
