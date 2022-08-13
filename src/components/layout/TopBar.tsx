@@ -64,7 +64,7 @@ const TopBar: NextPage<Props> = ({ heading, subheading, homeStyle }) => {
         {/* <WbytBtn theme="bright" text="Login" /> */}
         <button
           type="button"
-          class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-primary-200 bg-primary-200/20 hover:bg-primary-200/40 text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+          class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-primary-200 bg-primary-200/20 hover:bg-primary-200/40 text-primary-500 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
         >
           Login
         </button>
