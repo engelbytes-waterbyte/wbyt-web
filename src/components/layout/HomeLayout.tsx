@@ -9,8 +9,8 @@ import ScrollSuggestor from "@components/ScrollSuggestor";
 const HomeLayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
+  width: fit-content;
+  height: fit-content;
 `;
 
 const HomeTopLayoutWrapper = styled.div`
@@ -44,9 +44,6 @@ const HomeLayout: NextPage<Props> = ({ children }) => {
   return (
     <HomeLayoutWrapper>
       <HomeTopLayoutWrapper>
-        {/* contains all content for landing */}
-        {/* <TopBar heading={""} subheading={""} /> */}
-        {/*render different based on view - when too small only show nothing only react on responsiveness state change*/}
         <HomeSection>
           <ImageWrapper>
             <StyledImage

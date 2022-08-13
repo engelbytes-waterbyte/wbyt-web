@@ -15,6 +15,7 @@ const BaseLayoutWrapper = styled.div`
 
 const ChildrenWrapper = styled.div`
   min-height: 100vh;
+  position: relative;
   flex: 1;
 `;
 

@@ -6,11 +6,10 @@ const TopBarWrapper = styled.div<{ homeStyle: boolean }>`
   width: 100%;
   height: 180px;
   display: flex;
-  position: relative;
   justify-content: space-between;
   align-items: center;
   z-index: 4;
-  padding: 0 50px;
+  padding: 0 50px 0 0;
 
   margin-right: ${(props) => (props.homeStyle ? "50px" : "0px")};
   @media screen and (max-width: 768px) {
@@ -46,7 +45,10 @@ interface Props {
 
 const TopBar: NextPage<Props> = ({ heading, subheading, homeStyle }) => {
   return (
-    <TopBarWrapper homeStyle={homeStyle ?? false} className="">
+    <TopBarWrapper
+      homeStyle={homeStyle ?? false}
+      className={homeStyle ? "absolute" : "relative"}
+    >
       <HeadingsWrapper>
         {!homeStyle ? (
           <>
@@ -66,7 +68,6 @@ const TopBar: NextPage<Props> = ({ heading, subheading, homeStyle }) => {
           Login
         </button>
         <WbytBtn text="Mitglied werden" />
-          
       </ButtonsWrapper>
     </TopBarWrapper>
   );
