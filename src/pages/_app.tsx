@@ -7,6 +7,8 @@ import BaseLayout from "@components/layout/BaseLayout";
 import "@styles/globals.css";
 import "tailwindcss/tailwind.css";
 import { route } from "next/dist/server/router";
+import HomeTop from "@components/layout/HomeTop";
+import HomeLayout from "@components/layout/HomeLayout";
 
 export const wbytTheme = {
   colors: {
@@ -40,15 +42,18 @@ const routes: Route[] = [
 
 function MyApp({ Component, pageProps }: AppProps) {
   const route = useRouter();
+  const routeObjOtherThanHome = routes.find(
+    (x) => route.pathname.includes(x.path) && x.path != "/"
+  );
   return (
     <ThemeProvider theme={wbytTheme}>
-      <BaseLayout
-        route={routes.find(
-          (x) => route.pathname.includes(x.path) && x.path != "/"
-        )}
-      >
-        <Component {...pageProps} />
-      </BaseLayout>
+      {route.pathname == "/" ? (
+        <HomeLayout><Component {...pageProps} /></HomeLayout>
+      ) : (
+        <BaseLayout route={routeObjOtherThanHome}>
+          <Component {...pageProps} />
+        </BaseLayout>
+      )}
     </ThemeProvider>
   );
 }

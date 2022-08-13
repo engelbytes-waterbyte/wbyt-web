@@ -1,43 +1,45 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import styled from "styled-components";
-import NavBar from "@components/nav/NavBar";
-import TopBar from "@components/layout/TopBar";
-import ScrollSuggestor from "@components/ScrollSuggestor";
+import NavBar from "../nav/NavBar";
+import Footer from "@components/footer/Footer";
+import TopBar from "./TopBar";
+import { Route } from "@pages/_app";
+import { route } from "next/dist/server/router";
+import HomeTop from "./HomeTop";
+
+const BaseLayoutWrapper = styled.div`
+  display: flex;
+  
+
+`;
+
+const ChildrenWrapper = styled.div`
+  min-height: 100vh;
+  flex: 1;
+`;
 
 type Props = {
   children: React.ReactNode;
 };
 
-const ImageWrapper = styled.div`
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  position: absolute;
-  height: 100%;
-  width: 800px;
-  right: 0;
-`;
-
 const HomeLayout: NextPage<Props> = ({ children }) => {
-  return (
-    <>
-      <ImageWrapper>
-        <Image
-          className="-z-1"
-          src="/images/EngelbyteAmCoden.png"
-          layout="fill"
-          priority={true}
-          objectFit="contain"
-        />
-      </ImageWrapper>
+  const router = useRouter();
 
+  return (
+    <div>
+      <BaseLayoutWrapper>
+        <NavBar homeNavBar={true} />
+        <ChildrenWrapper>
+          <TopBar homeStyle={true} heading={"sdjfklaks"} subheading={""} />
+          <HomeTop />
+        </ChildrenWrapper>
+      </BaseLayoutWrapper>
       {children}
-      <ScrollSuggestor />
-    </>
+      <Footer />
+    </div>
   );
 };
 

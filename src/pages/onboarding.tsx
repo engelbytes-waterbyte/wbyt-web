@@ -1,4 +1,4 @@
-import HomeLayout from "@components/layout/HomeLayout";
+
 import { NextPage } from "next";
 
 const OnBoarding: NextPage = () => {

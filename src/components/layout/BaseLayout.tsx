@@ -20,10 +20,11 @@ const ChildrenWrapper = styled.div`
 
 type Props = {
   children: React.ReactNode;
+  children2: React.ReactNode;
   route: Route;
 };
 
-const BaseLayout: NextPage<Props> = ({ children, route }) => {
+const BaseLayout: NextPage<Props> = ({ children, children2, route }) => {
   const router = useRouter();
 
   return (
@@ -40,6 +41,7 @@ const BaseLayout: NextPage<Props> = ({ children, route }) => {
           {children}
         </ChildrenWrapper>
       </BaseLayoutWrapper>
+      {children2}
       <Footer />
     </div>
   );

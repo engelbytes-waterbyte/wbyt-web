@@ -108,8 +108,9 @@ const NavBar: React.FunctionComponent<NavBarProps> = ({ isTight }) => {
       <StyledLogoWrapper onClick={gehHam}>
         <StyledLogo />
       </StyledLogoWrapper>
-      {NavItems.map((item) => item as React.ReactElement)}
-      <NavItemGroup></NavItemGroup>
+      <NavItemGroup>
+        {NavItems.map((item) => item as React.ReactElement)}
+      </NavItemGroup>
     </NavWrapper>
   );
 };
