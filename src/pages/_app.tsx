@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 import styled, { ThemeProvider } from "styled-components";
 import Footer from "@components/footer/Footer";
-import AboutSectionLayout from "@components/layout/AboutSectionLayout";
+import AboutItemLayout from "@components/layout/AboutItemLayout";
 import { useRouter } from "next/router";
 import BaseLayout from "@components/layout/BaseLayout";
 import "@styles/globals.css";

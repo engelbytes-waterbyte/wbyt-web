@@ -1,4 +1,4 @@
-import AboutSectionLayout from "@components/layout/AboutSectionLayout";
+import AboutItemLayout from "@components/layout/AboutItemLayout";
 import Rive from "rive-react";
 import styled from "styled-components";
 import RefArr1 from "@assets/abstracts/refarr1.svg";
@@ -17,13 +17,11 @@ const DescriptionContainer = styled.div`
   align-items: center;
 `;
 
-const Heading = styled.h2`
-  margin-bottom: 15px;
-`;
+
 
 const S1Foundation = () => {
   return (
-    <AboutSectionLayout
+    <AboutItemLayout
       vertical="Wer?"
       largeText="Entwicklungszentrale der hellsten Köpfe des Mittelmeerraums."
       content="Aus jahrelanger Erfahrung in der selben Branche kristallisierten sich aus einer Gemenge von Schülern die dem Waterbyte Ideal einst am ehesten entsprachen eine Gruppierung von unglaublicher Einzigartigkeit."
@@ -31,14 +29,14 @@ const S1Foundation = () => {
       <Rive src="/hammeranimation.riv" />
       <DescriptionContainer>
         <RefArr1 />
-        <Heading>Wir schuften seit 9.2021.</Heading>
+        <h2 className="font-bold mb-2">Wir schuften seit 9.2021.</h2>
         <DescriptionText>
           Gertsch führte aufgrund eines Projektes welches in Gruppierungen
           durchgeführt werden sollte eine erhöhte Dichte von Waterbyte DNA
           Trägern herbei wodurch es zum Urknall der Waterbyte Geschichte kam.
         </DescriptionText>
       </DescriptionContainer>
-    </AboutSectionLayout>
+    </AboutItemLayout>
   );
 };
 

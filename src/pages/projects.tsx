@@ -5,7 +5,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import styles from "@styles/Home.module.css";
 import Footer from "@components/footer/Footer";
-import AboutSectionLayout from "@components/layout/AboutSectionLayout";
+import AboutItemLayout from "@components/layout/AboutItemLayout";
 import HomeLayout from "@components/layout/BaseLayout";
 import ScrollSuggestor from "@components/ScrollSuggestor";
 

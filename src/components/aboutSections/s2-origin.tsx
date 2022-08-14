@@ -1,4 +1,4 @@
-import AboutSectionLayout from "@components/layout/AboutSectionLayout";
+import AboutItemLayout from "@components/layout/AboutItemLayout";
 import styled from "styled-components";
 import Marquee from "react-double-marquee";
 import WbytMarquee from "@assets/illustrations/wbyt-marquee.svg";
@@ -30,10 +30,6 @@ const DescriptionContainer = styled.div`
   flex-direction: column;
 `;
 
-const Heading = styled.h2`
-  margin-bottom: 15px;
-  text-align: center;
-`;
 
 const Spacer = styled.div`
   height: 100px;
@@ -79,26 +75,17 @@ const Content = styled.div``;
 
 const StyledWbytMarquee = styled(WbytMarquee)`
   height: 200px;
+  margin-top: -70px;
   /* width: 200px; */
 `;
 
 const S2Origin = () => {
   return (
-    <AboutSectionLayout
+    <AboutItemLayout
       vertical="Woher?"
       largeText="Wo keimten die ersten Sprossen des Jungspundverbands?"
       content="Die Lehranstalt Grieskirchen vereinte einst einen Haufen diverser von diversen Knaben von welchen sich wiederum eine handvoll mit Waterbyte identifizierten. "
     >
-      <Marquee>
-        <Track>
-          <Content>
-            &nbsp;Infinite Marquee with long sentence Infinite Marquee with long
-            sentence Infinite Marquee with long sentence Infinite Marquee with
-            long sentence Infinite Marquee with long sentence
-          </Content>
-        </Track>
-      </Marquee>
-
       <CenterWrapper>
         <CircleContainer>
           <Marquee>
@@ -108,7 +95,7 @@ const S2Origin = () => {
         <Austria />
       </CenterWrapper>
       <DescriptionContainer>
-        <Heading>Quelle der Waterbytler</Heading>
+        <h2 className="font-bold text-center">Quelle der Waterbytler</h2>
         <DescriptionText>
           Hier sehen Sie Österreich: Land der Berge, Land am Ströme und ...
           Ursprungsland von Waterbyte! Grieskirchen erwies sich als jener Ort
@@ -116,7 +103,7 @@ const S2Origin = () => {
         </DescriptionText>
       </DescriptionContainer>
       <Spacer />
-    </AboutSectionLayout>
+    </AboutItemLayout>
   );
 };
 

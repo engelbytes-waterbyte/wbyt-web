@@ -1,6 +1,7 @@
-import AboutSectionLayout from "@components/layout/AboutSectionLayout";
+import AboutItemLayout from "@components/layout/AboutItemLayout";
 import Sofa from "@assets/illustrations/sofa.svg";
 import styled from "styled-components";
+
 const DescriptionText = styled.div`
   height: 200px;
   width: 300px;
@@ -10,7 +11,6 @@ const DescriptionText = styled.div`
 `;
 const DescriptionContainer = styled.div`
   padding: 10px;
-  /* background-color: blue; */
   left: 50%;
   position: relative;
   width: fit-content;
@@ -26,8 +26,6 @@ const Heading = styled.h2`
 `;
 
 const StyledSofa = styled(Sofa)`
-  /* display: flex;
-  justify-content: center; */
   left: 50%;
   transform: translateX(-50%);
   position: relative;
@@ -35,13 +33,13 @@ const StyledSofa = styled(Sofa)`
 
 const S4Strategy = () => {
   return (
-    <AboutSectionLayout
+    <AboutItemLayout
       vertical="Strategie?"
       largeText="Entwicklungszentrale der hellsten Köpfe des Mittelmeerraums."
       content="Aus jahrelanger Erfahrung in der selben Branche kristallisierten sich aus einer Gemenge von Schülern die dem Waterbyte Ideal einst am ehesten entsprachen eine Gruppierung von unglaublicher Einzigartigkeit."
     >
       <StyledSofa />
-      
+
       <DescriptionContainer>
         <DescriptionText>
           “Die hellsten Köpfe an einem Tisch ... hier kann es sich nur um das
@@ -50,7 +48,7 @@ const S4Strategy = () => {
           Köpfe des Mittelmeerraums beteiligen.
         </DescriptionText>
       </DescriptionContainer>
-    </AboutSectionLayout>
+    </AboutItemLayout>
   );
 };
 

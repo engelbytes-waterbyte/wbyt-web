@@ -5,7 +5,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import styles from "@styles/Home.module.css";
 import Footer from "@components/footer/Footer";
-import AboutSectionLayout from "@components/layout/AboutSectionLayout";
+import AboutItemLayout from "@components/layout/AboutItemLayout";
 import HomeTop from "@components/layout/HomeTop";
 import ScrollSuggestor from "@components/ScrollSuggestor";
 import S1Foundation from "@components/aboutSections/s1-foundation";
@@ -30,14 +30,13 @@ const Home: NextPage = () => {
 
       <div className="grow">
         <AboutSection>
-          safjklj
-          {/* <Element name="scrollToS1">
-            <S1Foundation />
-            </Element> 
-            <S2Origin />
-            <S3Activities />
-            <S4Strategy />
-            <S5Contact /> */}
+          {/* <Element name="scrollToS1"> */}
+          <S1Foundation />
+          {/* </Element> */}
+          <S2Origin />
+          <S3Activities />
+          <S4Strategy />
+          <S5Contact />
         </AboutSection>
       </div>
     </>

@@ -7,7 +7,6 @@ import NavBar from "../nav/NavBar";
 const AboutSectionLayoutWrapper = styled.section`
   display: flex;
   flex-direction: column;
-
   margin: 30px;
 `;
 
@@ -17,7 +16,6 @@ const AboutSectionTextWrapper = styled.div`
 `;
 
 const VerticalTextOnTheSide = styled.div`
-  /* background-color: blue; */
   color: ${(props) => props.theme.colors.waterblue};
   font-size: 100px;
   font-weight: 900;
@@ -26,7 +24,6 @@ const VerticalTextOnTheSide = styled.div`
 `;
 
 const ContentContainer = styled.div`
-  /* background-color: blue; */
   margin: 20px 40px;
   height: fit-content;
 `;
@@ -34,8 +31,8 @@ const ContentContainer = styled.div`
 const ContentHeader = styled.h1`
   font-size: 2em;
   margin: 10px 0px;
-  background-color: green;
-  width: 10px;
+  font-weight: 600;
+
 `;
 
 const VerticalTextWrapper = styled.div`
@@ -48,8 +45,8 @@ const VerticalTextWrapper = styled.div`
 
 const ContentParagraph = styled.p`
   margin-left: 20px;
-  font-size: 1.2em;  
-`
+  font-size: 1.2em;
+`;
 
 type Props = {
   children: React.ReactNode;
@@ -58,7 +55,7 @@ type Props = {
   content: string;
 };
 
-const AboutSectionLayout: NextPage<Props> = ({
+const AboutItemLayout: NextPage<Props> = ({
   children,
   vertical,
   largeText,
@@ -80,4 +77,4 @@ const AboutSectionLayout: NextPage<Props> = ({
   );
 };
 
-export default AboutSectionLayout;
+export default AboutItemLayout;
