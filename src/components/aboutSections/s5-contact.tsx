@@ -15,6 +15,7 @@ const CenterWrapper = styled.div`
 const S5Contact = () => {
   return (
     <AboutItemLayout
+      
       vertical="Kontakt!"
       largeText="Nachdem sie sich ausreichend erholt haben, sind nun Sie an der Reihe!"
       content="Waterbyte wäre nicht dort wo es jetzt ist ohne seine zahlreichen Partner und Freunde. Jetzt liegt es nur noch an ihnen den letzten Schritt zu wagen und mit uns in Kontakt zu treten. Wir werden uns allen ihren Wünschen widmen und jene in Realität umsetzen zu welchen wir uns bemächtigt fühlen. "

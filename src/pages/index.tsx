@@ -15,10 +15,6 @@ import S4Strategy from "@components/aboutSections/s4-strategy";
 import S5Contact from "@components/aboutSections/s5-contact";
 import { Element } from "react-scroll";
 
-const AboutSection = styled.section`
-  height: fit-content;
-`;
-
 const Home: NextPage = () => {
   return (
     <>
@@ -28,16 +24,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="grow">
-        <AboutSection>
-          {/* <Element name="scrollToS1"> */}
-          <S1Foundation />
-          {/* </Element> */}
-          <S2Origin />
-          <S3Activities />
-          <S4Strategy />
-          <S5Contact />
-        </AboutSection>
+      <div className=" mb-36">
+        {/* <Element name="scrollToS1"> */}
+        {/* </Element> */}
+        <S1Foundation />
+        <S2Origin />
+        <S3Activities />
+        <S4Strategy />
+        <S5Contact />
       </div>
     </>
   );

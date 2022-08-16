@@ -4,17 +4,6 @@ import Image from "next/image";
 import styled from "styled-components";
 import NavBar from "../nav/NavBar";
 
-const AboutSectionLayoutWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  margin: 30px;
-`;
-
-const AboutSectionTextWrapper = styled.div`
-  display: flex;
-  height: 400px;
-`;
-
 const VerticalTextOnTheSide = styled.div`
   color: ${(props) => props.theme.colors.waterblue};
   font-size: 100px;
@@ -23,17 +12,8 @@ const VerticalTextOnTheSide = styled.div`
   transform: rotate(-90deg);
 `;
 
-const ContentContainer = styled.div`
-  margin: 20px 40px;
-  height: fit-content;
-`;
 
-const ContentHeader = styled.h1`
-  font-size: 2em;
-  margin: 10px 0px;
-  font-weight: 600;
 
-`;
 
 const VerticalTextWrapper = styled.div`
   width: 100px;
@@ -43,10 +23,7 @@ const VerticalTextWrapper = styled.div`
   align-items: center;
 `;
 
-const ContentParagraph = styled.p`
-  margin-left: 20px;
-  font-size: 1.2em;
-`;
+
 
 type Props = {
   children: React.ReactNode;
@@ -62,18 +39,18 @@ const AboutItemLayout: NextPage<Props> = ({
   content,
 }) => {
   return (
-    <AboutSectionLayoutWrapper>
-      <AboutSectionTextWrapper>
-        <VerticalTextWrapper>
+    <section className="flex flex-col  break-words">
+      <div>
+        {/* <VerticalTextWrapper>
           <VerticalTextOnTheSide>{vertical}</VerticalTextOnTheSide>
-        </VerticalTextWrapper>
-        <ContentContainer>
-          <ContentHeader>{largeText}</ContentHeader>
-          <ContentParagraph>{content}</ContentParagraph>
-        </ContentContainer>
-      </AboutSectionTextWrapper>
+        </VerticalTextWrapper> */}
+        <div className="m-4">
+          <h1 className="text-2xl mx-10px font-bold">{largeText}</h1>
+          <p className="text-md">{content}</p>
+        </div>
+      </div>
       {children}
-    </AboutSectionLayoutWrapper>
+    </section>
   );
 };
 
