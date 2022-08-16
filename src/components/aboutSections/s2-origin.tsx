@@ -30,17 +30,8 @@ const DescriptionContainer = styled.div`
   flex-direction: column;
 `;
 
-
 const Spacer = styled.div`
   height: 100px;
-`;
-
-const CenterWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  /* flex-direction: column; */
-  /* background-color: red; */
-  position: relative;
 `;
 
 const CircleContainer = styled.div`
@@ -86,14 +77,16 @@ const S2Origin = () => {
       largeText="Wo keimten die ersten Sprossen des Jungspundverbands?"
       content="Die Lehranstalt Grieskirchen vereinte einst einen Haufen diverser von diversen Knaben von welchen sich wiederum eine handvoll mit Waterbyte identifizierten. "
     >
-      <CenterWrapper>
-        <CircleContainer>
-          <Marquee>
-            <StyledWbytMarquee />
-          </Marquee>
-        </CircleContainer>
-        <Austria />
-      </CenterWrapper>
+      <div>
+        <div className="flex justify-center relative h-96 overflow-hidden">
+          <Austria className="absolute"/>
+          <CircleContainer>
+            <Marquee>
+              <StyledWbytMarquee />
+            </Marquee>
+          </CircleContainer>
+        </div>
+      </div>
       <DescriptionContainer>
         <h2 className="font-bold text-center">Quelle der Waterbytler</h2>
         <DescriptionText>

@@ -38,7 +38,7 @@ const FooterHeader = styled.p`
 
 const FooterSlogan = styled.p`
   font-size: 40px;
-  margin: 0px;
+  margin: 4px 10px;
   font-weight: 700;
 `;
 
@@ -46,11 +46,7 @@ const WaterblueFooterSlogan = styled(FooterSlogan)`
   color: ${(props) => props.theme.colors.waterblue};
 `;
 
-const SloganWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-`;
+
 
 const iconStrokeWidth = "10%";
 
@@ -69,12 +65,12 @@ const Footer = () => {
         <div class="mb-6 md:mb-0">
           <a href="https://flowbite.com/" class="flex items-center">
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              <SloganWrapper>
+              <div class="flex flex-col">
                 <FooterSlogan>effektiv.</FooterSlogan>
                 <FooterSlogan>effizient.</FooterSlogan>
                 <FooterSlogan>engelbyte</FooterSlogan>
                 <WaterblueFooterSlogan>waterbyte.</WaterblueFooterSlogan>
-              </SloganWrapper>
+              </div>
             </span>
           </a>
         </div>
