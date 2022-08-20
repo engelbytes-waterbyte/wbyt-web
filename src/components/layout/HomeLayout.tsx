@@ -10,8 +10,6 @@ import { Route } from "@pages/_app";
 import { route } from "next/dist/server/router";
 import HomeTop from "./HomeTop";
 
-
-
 const ChildrenWrapper = styled.div`
   min-height: 100vh;
   flex: 1;
@@ -27,7 +25,7 @@ const HomeLayout: NextPage<Props> = ({ children }) => {
   return (
     <div>
       <div className="flex">
-        <NavBar homeNavBar={true} />
+        <NavBar />
         <ChildrenWrapper>
           <TopBar homeStyle={true} heading={"sdjfklaks"} subheading={""} />
           <HomeTop />

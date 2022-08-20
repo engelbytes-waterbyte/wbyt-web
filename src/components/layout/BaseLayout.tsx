@@ -21,7 +21,7 @@ const ChildrenWrapper = styled.div`
 type Props = {
   children: React.ReactNode;
   children2: React.ReactNode;
-  route: Route;
+  route?: Route;
 };
 
 const BaseLayout: NextPage<Props> = ({ children, children2, route }) => {
@@ -30,8 +30,7 @@ const BaseLayout: NextPage<Props> = ({ children, children2, route }) => {
   return (
     <div>
       <BaseLayoutWrapper>
-        <NavBar homeNavBar={router.pathname == "/"} />
-
+        <NavBar />
         <ChildrenWrapper>
           <TopBar
             homeStyle={router.pathname == "/"}

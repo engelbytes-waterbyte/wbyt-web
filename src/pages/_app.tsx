@@ -35,7 +35,11 @@ export interface Route {
 
 const routes: Route[] = [
   { path: "/", heading: "Home", subheading: "Welcome to WBYT" },
-  { path: "/projects", heading: "Projects", subheading: "Things we are building" },
+  {
+    path: "/projects",
+    heading: "Projects",
+    subheading: "Things we are building",
+  },
   { path: "/team", heading: "Team", subheading: "Get to know the crew" },
 ];
 
@@ -47,9 +51,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={wbytTheme}>
       {route.pathname == "/" ? (
-        <HomeLayout><Component {...pageProps} /></HomeLayout>
+        <HomeLayout>
+          <Component {...pageProps} />
+        </HomeLayout>
       ) : (
-        <BaseLayout route={routeObjOtherThanHome}>
+        <BaseLayout route={routeObjOtherThanHome!} children2={""}>
           <Component {...pageProps} />
         </BaseLayout>
       )}
