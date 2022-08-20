@@ -10,7 +10,7 @@ const Team: NextPage = () => {
         name="ungarmichael"
         description="Hi, I'm Michael. I'm a developer and I love to build things."
         instagram="https://www.instagram.com/ungrmichael"
-        github="htttps://github.com/ungarmichael"
+        github="https://github.com/ungarmichael"
         imageUrl="https://images.obi.at/product/DE/1500x1500/218183_1.jpg"
         role="Leiter"
       />
