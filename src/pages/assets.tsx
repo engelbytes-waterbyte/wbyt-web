@@ -9,10 +9,10 @@ const assets = () => {
             /assets?
           </h1>
           <p className="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white">
-            Derzeit nicht <Emoji label="eigschissn" symbol="😦"></Emoji>.
+            Gibt es schon <Emoji label="eigschissn" symbol="🥸"></Emoji>, aber
           </p>
           <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
-            Wir hoffen das du einmal wieder kommst.
+            wir arbeiten noch daran <Emoji label="eigschissn" symbol="🏗"></Emoji>
           </p>
           <a
             href="#"
