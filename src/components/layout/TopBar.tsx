@@ -46,10 +46,7 @@ interface Props {
 
 const TopBar: NextPage<Props> = ({ heading, subheading, homeStyle }) => {
   return (
-    <TopBarWrapper
-      homeStyle={homeStyle ?? false}
-    
-    >
+    <TopBarWrapper homeStyle={homeStyle ?? false}>
       <HeadingsWrapper>
         {!homeStyle ? (
           <>
@@ -62,13 +59,21 @@ const TopBar: NextPage<Props> = ({ heading, subheading, homeStyle }) => {
       </HeadingsWrapper>
       <ButtonsWrapper>
         {/* <WbytBtn theme="bright" text="Login" /> */}
-        <button
+        {/* <button
           type="button"
           class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-primary-200 bg-primary-200/20 hover:bg-primary-200/40 text-primary-500 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
         >
           Login
-        </button>
-        <WbytBtn text="Mitglied werden" />
+        </button> */}
+        {/* <WbytBtn text="Mitglied werden" /> */}
+        <a href="mailto:michael.ungar03+wbyt@gmail.com">
+          <button
+            type="button"
+            className="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+            Mitglied werden
+          </button>
+        </a>
       </ButtonsWrapper>
     </TopBarWrapper>
   );
