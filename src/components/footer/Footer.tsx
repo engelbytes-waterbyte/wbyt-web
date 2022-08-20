@@ -46,8 +46,6 @@ const WaterblueFooterSlogan = styled(FooterSlogan)`
   color: ${(props) => props.theme.colors.waterblue};
 `;
 
-
-
 const iconStrokeWidth = "10%";
 
 const iconStyle = {
@@ -81,8 +79,11 @@ const Footer = () => {
             </h2>
             <ul class="text-gray-600 dark:text-gray-400">
               <li class="mb-4">
-                <a href="https://flowbite.com/" class="hover:underline">
-                  contact@waterbyte.studio
+                <a
+                  href="mailto:michael.ungar03+wbyt@gmail.com"
+                  class="hover:underline"
+                >
+                  email
                 </a>
               </li>
               <li>+43 677 614 514 90</li>
@@ -110,17 +111,15 @@ const Footer = () => {
           </div>
           <div>
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-              Legal
+              Issues
             </h2>
             <ul class="text-gray-600 dark:text-gray-400">
               <li class="mb-4">
-                <a href="#" class="hover:underline">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" class="hover:underline">
-                  Terms &amp; Conditions
+                <a
+                  href="https://github.com/engelbytes-waterbyte/wbyt-web/issues"
+                  class="hover:underline"
+                >
+                  report bugs
                 </a>
               </li>
             </ul>

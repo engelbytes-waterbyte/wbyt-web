@@ -2,6 +2,7 @@ import AboutItemLayout from "@components/layout/AboutItemLayout";
 import Rive from "rive-react";
 import styled from "styled-components";
 import RefArr1 from "@assets/abstracts/refarr1.svg";
+import { Element } from "react-scroll";
 
 const DescriptionText = styled.div`
   height: 200px;
@@ -17,26 +18,26 @@ const DescriptionContainer = styled.div`
   align-items: center;
 `;
 
-
-
 const S1Foundation = () => {
   return (
-    <AboutItemLayout
-      vertical="Wer?"
-      largeText="Entwicklungszentrale der hellsten Köpfe des Mittelmeerraums."
-      content="Aus jahrelanger Erfahrung in der selben Branche kristallisierten sich aus einer Gemenge von Schülern die dem Waterbyte Ideal einst am ehesten entsprachen eine Gruppierung von unglaublicher Einzigartigkeit."
-    >
-      <Rive src="/hammeranimation.riv" />
-      <DescriptionContainer>
-        <RefArr1 />
-        <h2 className="font-bold mb-2">Wir schuften seit 9.2021.</h2>
-        <DescriptionText>
-          Gertsch führte aufgrund eines Projektes welches in Gruppierungen
-          durchgeführt werden sollte eine erhöhte Dichte von Waterbyte DNA
-          Trägern herbei wodurch es zum Urknall der Waterbyte Geschichte kam.
-        </DescriptionText>
-      </DescriptionContainer>
-    </AboutItemLayout>
+    <Element name="scrollToS1">
+      <AboutItemLayout
+        vertical="Wer?"
+        largeText="Entwicklungszentrale der hellsten Köpfe des Mittelmeerraums."
+        content="Aus jahrelanger Erfahrung in der selben Branche kristallisierten sich aus einer Gemenge von Schülern die dem Waterbyte Ideal einst am ehesten entsprachen eine Gruppierung von unglaublicher Einzigartigkeit."
+      >
+        <Rive src="/hammeranimation.riv" />
+        <DescriptionContainer>
+          <RefArr1 />
+          <h2 className="font-bold mb-2">Wir schuften seit 9.2021.</h2>
+          <DescriptionText>
+            Gertsch führte aufgrund eines Projektes welches in Gruppierungen
+            durchgeführt werden sollte eine erhöhte Dichte von Waterbyte DNA
+            Trägern herbei wodurch es zum Urknall der Waterbyte Geschichte kam.
+          </DescriptionText>
+        </DescriptionContainer>
+      </AboutItemLayout>
+    </Element>
   );
 };
 
