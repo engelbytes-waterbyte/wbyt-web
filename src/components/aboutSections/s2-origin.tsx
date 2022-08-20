@@ -78,8 +78,11 @@ const S2Origin = () => {
       content="Die Lehranstalt Grieskirchen vereinte einst einen Haufen diverser von diversen Knaben von welchen sich wiederum eine handvoll mit Waterbyte identifizierten. "
     >
       <div>
-        <div className="flex justify-center relative h-96 overflow-hidden">
-          <Austria className="absolute"/>
+        <div
+          className="flex justify-center relative overflow-hidden"
+          style={{ height: "500px" }}
+        >
+          <Austria className="absolute" />
           <CircleContainer>
             <Marquee>
               <StyledWbytMarquee />
