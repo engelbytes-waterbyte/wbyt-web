@@ -9,10 +9,10 @@ const Store = () => {
             /stickers?
           </h1>
           <p className="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white">
-            Ich denke nicht <Emoji label="eigschissn" symbol="😦"></Emoji>.
+            Jetzt noch nicht <Emoji label="eigschissn" symbol="😦"></Emoji>
           </p>
           <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
-            Aber hoffentlich bald <Emoji label="eigschissn" symbol="🙂"></Emoji>.
+            aber bald <Emoji label="eigschissn" symbol="🙂"></Emoji>
           </p>
           <a
             href="#"
