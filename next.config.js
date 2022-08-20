@@ -20,4 +20,7 @@ module.exports = {
     },
     autoprefixer: {},
   },
+  images:{
+    domains: ['images.unsplash.com', 'images.obi.at', 'imgur.com']
+  }
 };
