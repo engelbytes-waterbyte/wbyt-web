@@ -29,8 +29,8 @@ const AboutItemLayout: NextPage<Props> = ({
     <section className="flex flex-col items-center break-words ">
       <div className="m-4 p-8 format w-full  lg:max-w-3xl ">
         <h4 className="text-blue-400">{vertical}</h4>
-        <h1 className="font-bold">{largeText}</h1>
-        <p className="text-md">{content}</p>
+        <h1 className="font-bold m-0">{largeText}</h1>
+        <p className="text-md mt-4">{content}</p>
       </div>
       <div className=" w-full">{children}</div>
     </section>
