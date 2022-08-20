@@ -7,16 +7,17 @@ import { Mail } from "tabler-icons-react";
 const S5Contact = () => {
   return (
     <AboutItemLayout
-      vertical="Kontakt!"
-      largeText="Nachdem sie sich ausreichend erholt haben, sind nun Sie an der Reihe!"
-      content="Waterbyte wäre nicht dort wo es jetzt ist ohne seine zahlreichen Partner und Freunde. Jetzt liegt es nur noch an ihnen den letzten Schritt zu wagen und mit uns in Kontakt zu treten. Wir werden uns allen ihren Wünschen widmen und jene in Realität umsetzen zu welchen wir uns bemächtigt fühlen. "
+      vertical="Kontakt"
+      largeText="Jede Möglichkeit unsere Gesinnung zu verbreiten und unser erlangtes Wissen anzuwenden ist für uns viel Wert."
+      content="Waterbyte wäre nicht dort wo es jetzt ist ohne seine zahlreichen Partner und Freunde. Jeder neuer Kontakt in unerem Netzwerk ist ein wertvoller Beitrag zur Philosophie von Waterbyte. Aus diesem Grund würden wir uns freuen von Ihnen zu hören!"
+      // Wir werden uns allen ihren Wünschen widmen und jene in Realität umsetzen zu welchen wir uns bemächtigt fühlen.
     >
-      <div class="flex flex-col relative justify-center items-center mt-20 mb-40">
+      <div className="flex flex-col relative justify-center items-center mt-20 mb-40">
         <h3 className="mb-4 font-bold">contact@waterbyte.studio</h3>
         <RefArr5 />
         <button
           type="button"
-          class="flex text-white items-center bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 mt-4"
+          className="flex text-white items-center bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 mt-4"
         >
           <Mail className="mr-2" />
           Send us a Message

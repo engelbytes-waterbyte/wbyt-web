@@ -34,18 +34,16 @@ const StyledSofa = styled(Sofa)`
 const S4Strategy = () => {
   return (
     <AboutItemLayout
-      vertical="Strategie?"
-      largeText="Entwicklungszentrale der hellsten Köpfe des Mittelmeerraums."
-      content="Aus jahrelanger Erfahrung in der selben Branche kristallisierten sich aus einer Gemenge von Schülern die dem Waterbyte Ideal einst am ehesten entsprachen eine Gruppierung von unglaublicher Einzigartigkeit."
+      vertical="Was wollen wir Erreichen?"
+      largeText="Ein Unternehmen in Form einer Community zu führen um somit Ideen einfach die Chance zu geben sich zu verwirklichen."
+      content="Wir lieben wie einfach es ist mit Code Ideen zu umzusetzen. Wir wollen diese Fähigkeit nicht nur teilen sondern auch das Prinzip auf andere Bereiche übertragen. Somit soll Waterbyte der Ort sein an dem grundsätzlich jede Idee realisierbar ist."
     >
       <StyledSofa />
 
       <DescriptionContainer>
         <DescriptionText>
-          “Die hellsten Köpfe an einem Tisch ... hier kann es sich nur um das
-          Engelbyte startup handeln” - So lauten Aussagen von Augenzeugen bei
-          den allgemein bekannten Waterbyte Meetings an dem sich die hellsten
-          Köpfe des Mittelmeerraums beteiligen.
+          Auch der Ausgleich wird bei uns gemeinsam Verbracht da nur durch
+          Ausreichend Erholung die Kreativität weiterhin fließen kann.
         </DescriptionText>
       </DescriptionContainer>
     </AboutItemLayout>

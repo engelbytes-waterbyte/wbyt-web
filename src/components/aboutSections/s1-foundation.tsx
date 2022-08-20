@@ -22,18 +22,20 @@ const S1Foundation = () => {
   return (
     <Element name="scrollToS1">
       <AboutItemLayout
-        vertical="Wer?"
-        largeText="Entwicklungszentrale der hellsten Köpfe des Mittelmeerraums."
-        content="Aus jahrelanger Erfahrung in der selben Branche kristallisierten sich aus einer Gemenge von Schülern die dem Waterbyte Ideal einst am ehesten entsprachen eine Gruppierung von unglaublicher Einzigartigkeit."
+        vertical="Was sind wir?"
+        largeText="Die Entwicklungszentrale der hellsten Köpfe des Mittelmeerraums."
+        content="Aus jahrelanger Erfahrung in der selben Branche kristallisierten sich aus einer Gemenge von Entwicklern die dem Waterbyte Ideal einst am ehesten entsprachen eine Gruppierung von unglaublicher Einzigartigkeit."
       >
         <Rive src="/hammeranimation.riv" />
         <DescriptionContainer>
           <RefArr1 />
-          <h2 className="font-bold mb-2">Wir schuften seit 9.2021.</h2>
+          <h2 className="font-bold mb-2 mt-3">
+            Wir schuften gemeinsam seit September 2021
+          </h2>
           <DescriptionText>
-            Gertsch führte aufgrund eines Projektes welches in Gruppierungen
-            durchgeführt werden sollte eine erhöhte Dichte von Waterbyte DNA
-            Trägern herbei wodurch es zum Urknall der Waterbyte Geschichte kam.
+            Ein Lehrer führte einst aufgrund eines Projektes eine erhöhte Dichte
+            von Waterbyte DNA Trägern herbei wodurch es zum Urknall der
+            Waterbyte Geschichte kam.
           </DescriptionText>
         </DescriptionContainer>
       </AboutItemLayout>

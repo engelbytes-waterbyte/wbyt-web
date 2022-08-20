@@ -73,9 +73,9 @@ const StyledWbytMarquee = styled(WbytMarquee)`
 const S2Origin = () => {
   return (
     <AboutItemLayout
-      vertical="Woher?"
-      largeText="Wo keimten die ersten Sprossen des Jungspundverbands?"
-      content="Die Lehranstalt Grieskirchen vereinte einst einen Haufen diverser von diversen Knaben von welchen sich wiederum eine handvoll mit Waterbyte identifizierten. "
+      vertical="Von wo sind wir?"
+      largeText="Unser Ursprungsland: Oberösterreich - Eine Lehranstalt als Katalysator."
+      content="In der HTL Grieskirchen keimten die ersten Sprossen des Jungspundverbandes Waterbyte."
     >
       <div
         className="flex justify-center relative overflow-hidden "
@@ -92,9 +92,9 @@ const S2Origin = () => {
       <DescriptionContainer>
         <h2 className="font-bold text-center">Quelle der Waterbytler</h2>
         <DescriptionText>
-          Hier sehen Sie Österreich: Land der Berge, Land am Ströme und ...
-          Ursprungsland von Waterbyte! Grieskirchen erwies sich als jener Ort
-          mit der einst höchsten Konzentration von passenden Mitgliedern.
+          Österreich: Land der Berge, Land am Strome und Ursprungsland von
+          Waterbyte! Der Bezirk Grieskirchen erwies sich als jener Ort mit der
+          einst höchsten Konzentration von passenden Mitgliedern.
         </DescriptionText>
       </DescriptionContainer>
       <Spacer />
