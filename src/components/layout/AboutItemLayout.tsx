@@ -4,26 +4,13 @@ import Image from "next/image";
 import styled from "styled-components";
 import NavBar from "../nav/NavBar";
 
-const VerticalTextOnTheSide = styled.div`
-  color: ${(props) => props.theme.colors.waterblue};
-  font-size: 100px;
-  font-weight: 900;
-  margin: 0;
-  transform: rotate(-90deg);
-`;
-
-
-
-
-const VerticalTextWrapper = styled.div`
-  width: 100px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-
+// const VerticalTextOnTheSide = styled.div`
+//   color: ${(props) => props.theme.colors.waterblue};
+//   font-size: 100px;
+//   font-weight: 900;
+//   margin: 0;
+//   transform: rotate(-90deg);
+// `;
 
 type Props = {
   children: React.ReactNode;
@@ -39,17 +26,13 @@ const AboutItemLayout: NextPage<Props> = ({
   content,
 }) => {
   return (
-    <section className="flex flex-col  break-words">
-      <div>
-        {/* <VerticalTextWrapper>
-          <VerticalTextOnTheSide>{vertical}</VerticalTextOnTheSide>
-        </VerticalTextWrapper> */}
-        <div className="m-4">
-          <h1 className="text-2xl mx-10px font-bold">{largeText}</h1>
-          <p className="text-md">{content}</p>
-        </div>
+    <section className="flex flex-col items-center break-words ">
+      <div className="m-4 p-8 format w-full  lg:max-w-3xl ">
+        <h4 className="text-blue-400">{vertical}</h4>
+        <h1 className="font-bold">{largeText}</h1>
+        <p className="text-md">{content}</p>
       </div>
-      {children}
+      <div className=" w-full">{children}</div>
     </section>
   );
 };
