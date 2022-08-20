@@ -35,9 +35,8 @@ export interface Route {
 
 const routes: Route[] = [
   { path: "/", heading: "Home", subheading: "Welcome to WBYT" },
-  { path: "/projects", heading: "Projects", subheading: "Projects" },
-  { path: "/team", heading: "Team", subheading: "Team" },
-  { path: "/blog", heading: "Blog", subheading: "Blog" },
+  { path: "/projects", heading: "Projects", subheading: "Things we are building" },
+  { path: "/team", heading: "Team", subheading: "Get to know the crew" },
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
