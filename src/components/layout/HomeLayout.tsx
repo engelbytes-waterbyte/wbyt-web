@@ -26,7 +26,7 @@ const HomeLayout: NextPage<Props> = ({ children }) => {
 
   return (
     <div>
-      <div class="flex">
+      <div className="flex">
         <NavBar homeNavBar={true} />
         <ChildrenWrapper>
           <TopBar homeStyle={true} heading={"sdjfklaks"} subheading={""} />
