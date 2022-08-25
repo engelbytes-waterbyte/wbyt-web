@@ -31,7 +31,7 @@ const DescriptionContainer = styled.div`
 `;
 
 const Spacer = styled.div`
-  height: 100px;
+  height: 20px;
 `;
 
 const CircleContainer = styled.div`
@@ -97,7 +97,7 @@ const S2Origin = () => {
           einst höchsten Konzentration von passenden Mitgliedern.
         </DescriptionText>
       </DescriptionContainer>
-      <Spacer />
+      
     </AboutItemLayout>
   );
 };

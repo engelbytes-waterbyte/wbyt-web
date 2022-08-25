@@ -35,15 +35,14 @@ const S4Strategy = () => {
   return (
     <AboutItemLayout
       vertical="Was wollen wir Erreichen?"
-      largeText="Ein Unternehmen in Form einer Community zu führen um somit Ideen einfach die Chance zu geben sich zu verwirklichen."
-      content="Wir lieben wie einfach es ist mit Code Ideen zu umzusetzen. Wir wollen diese Fähigkeit nicht nur teilen sondern auch das Prinzip auf andere Bereiche übertragen. Somit soll Waterbyte der Ort sein an dem grundsätzlich jede Idee realisierbar ist."
+      largeText="Eine Symbiose aus Chillpausen und Produktivitätstornados für ein ausgewogenes Projekterlebnis"
+      content="Da wir realiserten wie Medien unser gemeinsames Verweilen enorm verbessern konnte. Aus diesem Grund versuchern wir die Experience durch diverse Medien wie Blogs, Stickers und News zu optimieren."
     >
       <StyledSofa />
-
       <DescriptionContainer>
         <DescriptionText>
-          Auch der Ausgleich wird bei uns gemeinsam Verbracht da nur durch
-          Ausreichend Erholung die Kreativität weiterhin fließen kann.
+          Unsere Kreativität reichern wir meistens in unseren
+          genossenschaftlichen Séparée an.
         </DescriptionText>
       </DescriptionContainer>
     </AboutItemLayout>

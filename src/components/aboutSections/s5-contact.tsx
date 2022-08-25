@@ -7,10 +7,9 @@ import { Mail } from "tabler-icons-react";
 const S5Contact = () => {
   return (
     <AboutItemLayout
-      vertical="Kontakt"
+      vertical="Trete unserer wachsenden Gemeinschaft bei!"
       largeText="Jede Möglichkeit unsere Gesinnung zu verbreiten und unser erlangtes Wissen anzuwenden ist für uns viel Wert."
       content="Waterbyte wäre nicht dort wo es jetzt ist ohne seine zahlreichen Partner und Freunde. Jeder neuer Kontakt in unerem Netzwerk ist ein wertvoller Beitrag zur Philosophie von Waterbyte. Aus diesem Grund würden wir uns freuen von Ihnen zu hören!"
-      // Wir werden uns allen ihren Wünschen widmen und jene in Realität umsetzen zu welchen wir uns bemächtigt fühlen.
     >
       <div className="flex flex-col relative justify-center items-center mt-20 mb-40">
         <h3 className="mb-4 font-bold">contact@waterbyte.studio</h3>
