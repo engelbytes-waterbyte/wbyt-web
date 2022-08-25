@@ -43,10 +43,9 @@ const BlankDiv = styled.div`
 `;
 
 const WbytNames = [
-  // eslint-disable-next-line react/jsx-key
-  <CrossedText>die Sekte</CrossedText>,
   "die Gruppierung",
   "das Startup",
+  "die HTL-Schueler",
   "die Jungspündler",
   "die Entwickler",
   "die Jova-Experten",
@@ -54,14 +53,18 @@ const WbytNames = [
   "die Coder",
   "die Chillgruppe",
   "die Genießer",
-  "die Designer",
   "die Vereinigung",
-  "das Jungunternehmen",
-  "das Unicorn",
+  "die Genossenschaft",
+  "das Unicorn-Team",
   "der Internet-kolloss",
   "die Stakeholder",
   "die Chilllehrlinge",
   "die Chillmeister",
+  "die Banditen",
+  "die Geistlichen",
+  "die Kreativen",
+  "die Absoluten",
+  "die Motivierten",
 ];
 
 const StyledArrowDownCircle = styled(ArrowDownCircle)`
