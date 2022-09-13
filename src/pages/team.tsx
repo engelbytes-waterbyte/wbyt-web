@@ -8,7 +8,7 @@ const Team: NextPage = () => {
     <div className="flex flex-col items-center md:flex-wrap md:flex-row">
       <TeamItem
         name="ungarmichael"
-        description="Hi, I'm Michael. I'm a developer and I love to build things."
+        description="Hi, I'm Michael."
         instagram="https://www.instagram.com/ungrmichael"
         github="https://github.com/ungarmichael"
         imageUrl="https://images.obi.at/product/DE/1500x1500/218183_1.jpg"
