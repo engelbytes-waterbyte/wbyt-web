@@ -14,6 +14,13 @@ const Team: NextPage = () => {
         imageUrl="https://images.obi.at/product/DE/1500x1500/218183_1.jpg"
         role="Leiter"
       />
+      <TeamItem
+          name="noassl"
+          role="Nachwuchskodierer"
+          imageUrl="https://avatars.githubusercontent.com/u/46902503?v=4"
+          description='Starred in "ongschissena donut"'
+          github="https://github.com/littlegamer757"
+          instagram="https://www.instagram.com/janikn.15/" />
     </div>
   );
 };
