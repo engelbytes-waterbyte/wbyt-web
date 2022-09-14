@@ -26,6 +26,6 @@ module.exports = {
     autoprefixer: {},
   },
   images:{
-    domains: ['images.unsplash.com', 'images.obi.at', 'imgur.com']
+    domains: ['images.unsplash.com', 'images.obi.at', 'imgur.com', "avatars.githubusercontent.com"]
   }
 };
