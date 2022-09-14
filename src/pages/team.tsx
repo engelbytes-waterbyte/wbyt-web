@@ -15,12 +15,21 @@ const Team: NextPage = () => {
         role="Leiter"
       />
       <TeamItem
-          name="noassl"
-          role="Nachwuchskodierer"
-          imageUrl="https://avatars.githubusercontent.com/u/46902503?v=4"
-          description='Starred in "ongschissena donut"'
-          github="https://github.com/littlegamer757"
-          instagram="https://www.instagram.com/janikn.15/" />
+        name="Tops"
+        description="Hi, I'm Tops. I bin der der hust(l)et."
+        instagram="https://www.instagram.com/tobe.w69"
+        github="https://github.com/Tobi696"
+        imageUrl="https://ca.slack-edge.com/T03241P5GDD-U032LV559B6-db6553df4187-512"
+        role="Projektmitarbeiter"
+      />
+      <TeamItem
+        name="noassl"
+        role="Nachwuchskodierer"
+        imageUrl="https://avatars.githubusercontent.com/u/46902503?v=4"
+        description='Starred in "ongschissena donut"'
+        github="https://github.com/littlegamer757"
+        instagram="https://www.instagram.com/janikn.15/"
+      />
     </div>
   );
 };
