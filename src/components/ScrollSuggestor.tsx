@@ -56,7 +56,7 @@ const WbytNames = [
   "die Vereinigung",
   "die Genossenschaft",
   "das Unicorn-Team",
-  "den Internet-kolloss",
+  "den Internet-Koloss",
   "die Stakeholder",
   "die Chilllehrlinge",
   "die Chillmeister",

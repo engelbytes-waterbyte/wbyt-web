@@ -8,8 +8,8 @@ const S5Contact = () => {
     return (
         <AboutItemLayout
             vertical="Trete unserer wachsenden Gemeinschaft bei!"
-            largeText="Jede Möglichkeit unsere Gesinnung zu verbreiten und unser erlangtes Wissen anzuwenden ist für uns viel Wert."
-            content="Waterbyte wäre nicht dort wo es jetzt ist ohne seine zahlreichen Partner und Freunde. Jeder neuer Kontakt in unerem Netzwerk ist ein wertvoller Beitrag zur Philosophie von Waterbyte. Aus diesem Grund würden wir uns freuen von Ihnen zu hören!"
+            largeText="Jede Möglichkeit unsere Gesinnung zu verbreiten und unser erlangtes Wissen anzuwenden ist für uns viel wert."
+            content="Waterbyte wäre nicht dort wo es jetzt ist ohne seine zahlreichen Partner und Freunde. Jeder neue Kontakt in unerem Netzwerk ist ein wertvoller Beitrag zur Philosophie von Waterbyte. Aus diesem Grund würden wir uns freuen, von Ihnen zu hören!"
         >
             <div className="flex flex-col relative justify-center items-center mt-20 mb-40">
                 <h3 className="mb-4 font-bold">contact@waterbyte.studio</h3>

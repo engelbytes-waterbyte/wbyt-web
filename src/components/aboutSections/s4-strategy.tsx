@@ -34,14 +34,14 @@ const StyledSofa = styled(Sofa)`
 const S4Strategy = () => {
   return (
     <AboutItemLayout
-      vertical="Was wollen wir Erreichen?"
-      largeText="Eine Symbiose aus Chillpausen und Produktivitätstornados für ein ausgewogenes Projekterlebnis"
-      content="Da wir realiserten wie Medien unser gemeinsames Verweilen enorm verbessern konnte. Aus diesem Grund versuchern wir die Experience durch diverse Medien wie Blogs, Stickers und News zu optimieren."
+      vertical="Was wollen wir erreichen?"
+      largeText="Eine Symbiose aus Chillpausen und Produktivitätstornados für ein ausgewogenes Projekterlebnis."
+      content="Da wir realisierten, dass Medien unser gemeinsames Verweilen enorm verbessern können, versuchen wir, die Experience durch diverse Medien wie Blogs, Stickers und News zu optimieren."
     >
       <StyledSofa />
       <DescriptionContainer>
         <DescriptionText>
-          Unsere Kreativität reichern wir meistens in unseren
+          Unsere Kreativität reichern wir meistens in unserem
           genossenschaftlichen Séparée an.
         </DescriptionText>
       </DescriptionContainer>

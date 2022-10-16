@@ -24,7 +24,7 @@ const S1Foundation = () => {
       <AboutItemLayout
         vertical="Was sind wir?"
         largeText="Die Entwicklungszentrale der hellsten Köpfe des Mittelmeerraums."
-        content="Aus jahrelanger Erfahrung in der selben Branche kristallisierten sich aus einer Gemenge von Entwicklern die dem Waterbyte Ideal einst am ehesten entsprachen eine Gruppierung von unglaublicher Einzigartigkeit. Wir haben es uns zur Aufgabe gemacht die Gesinnung der altmodischen Projektentwicklungs-Techniken neu zu erfinden um somit deren Geist weiterzuführen."
+        content="Aus jahrelanger Erfahrung in der selben Branche kristallisierte sich aus einem Gemenge von Entwicklern die dem Waterbyte-Ideal einst am ehesten entsprachen eine Gruppierung von unglaublicher Einzigartigkeit. Wir haben es uns zur Aufgabe gemacht, die Gesinnung der altmodischen Projektentwicklungs-Techniken neu zu erfinden, um somit deren Geist weiterzuführen."
       >
         <Rive src="/hammeranimation.riv" />
         <DescriptionContainer>
@@ -33,10 +33,10 @@ const S1Foundation = () => {
             September 2021 - Ein Ende und ein Anfang
           </h2>
           <DescriptionText>
-            Lehrer Bert verlies die Schule und direkt im Schuljahr darauf führte
-            Lehrer Gertsch führte einst aufgrund eines Projektes eine erhöhte
-            Dichte von Waterbyte DNA Trägern herbei wodurch es zum Urknall der
-            Waterbyte Geschichte kam.
+            Lehrer Bert verließ die Schule und direkt im Schuljahr darauf führte
+            Lehrer Gertsch einst aufgrund eines Projektes eine erhöhte
+            Dichte von Waterbyte-DNA-Trägern herbei, wodurch es zum Urknall der
+            Waterbyte-Geschichte kam.
           </DescriptionText>
         </DescriptionContainer>
       </AboutItemLayout>
