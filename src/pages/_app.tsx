@@ -43,6 +43,16 @@ const routes: Route[] = [
     },
     { path: "/team", heading: "Team", subheading: "Get to know the crew" },
     { path: "/blog", heading: "Blog", subheading: "Get info out ajsfdlk" },
+    {
+        path: "/onboarding",
+        heading: "Onboarding",
+        subheading: "Tell us why you want to join!",
+    },
+    {
+        path: "/terms",
+        heading: "Terms and Conditions",
+        subheading: "Wie olles so oblauft bei uns",
+    },
 ];
 
 function WaterbyteWeb({ Component, pageProps }: AppProps): JSX.Element {
