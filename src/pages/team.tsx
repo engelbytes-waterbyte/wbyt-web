@@ -12,7 +12,7 @@ const Team: NextPage = () => {
                 instagram="https://www.instagram.com/ungrmichael"
                 github="https://github.com/ungarmichael"
                 imageUrl="https://images.obi.at/product/DE/1500x1500/218183_1.jpg"
-                role="Leider Leiter"
+                role="Projektleitung"
             />
             <TeamItem
                 name="Tops"
