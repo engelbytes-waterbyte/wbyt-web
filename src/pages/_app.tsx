@@ -9,6 +9,7 @@ import "tailwindcss/tailwind.css";
 import { route } from "next/dist/server/router";
 import HomeTop from "@components/layout/HomeTop";
 import HomeLayout from "@components/layout/HomeLayout";
+import { createClient } from "@supabase/supabase-js";
 
 export const wbytTheme = {
     colors: {
@@ -41,9 +42,10 @@ const routes: Route[] = [
         subheading: "Things we are building",
     },
     { path: "/team", heading: "Team", subheading: "Get to know the crew" },
+    { path: "/blog", heading: "Blog", subheading: "Get info out ajsfdlk" },
 ];
 
-function MyApp({ Component, pageProps }: AppProps) {
+function WaterbyteWeb({ Component, pageProps }: AppProps): JSX.Element {
     const route = useRouter();
     const routeObjOtherThanHome = routes.find(
         (x) => route.pathname.includes(x.path) && x.path != "/"
@@ -65,4 +67,4 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 function GetMatchingRoute(theroute: string) {}
 
-export default MyApp;
+export default WaterbyteWeb;

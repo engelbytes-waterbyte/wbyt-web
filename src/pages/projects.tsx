@@ -11,13 +11,6 @@ import ScrollSuggestor from "@components/ScrollSuggestor";
 import { createClient } from "@supabase/supabase-js";
 import { IProject } from "models";
 
-///supabase data
-const supabaseUrl = "https://crwskcfvwowttsaqytfn.supabase.co";
-const supabaseKey =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNyd3NrY2Z2d293dHRzYXF5dGZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjYyNzA2NDIsImV4cCI6MTk4MTg0NjY0Mn0.G_BT4kdIgAAViyC5XFjOnibwn66tBBvFEU9xw5EY1xU";
-
-const supabase = createClient(supabaseUrl, supabaseKey!);
-
 /// types for the project widgets
 interface ProjectsPageProps {
     projects: IProject[];
@@ -57,6 +50,11 @@ const Project = ({ project }: { project: IProject }): JSX.Element => {
 ///export section 📦
 export default ProjectsPage;
 export async function getStaticProps() {
+    ///supabase data
+    const supabaseUrl = "https://crwskcfvwowttsaqytfn.supabase.co";
+    const supabaseKey = process.env.SUPABASE_KEY;
+    const supabase = createClient(supabaseUrl, supabaseKey!);
+
     const { data: projects, error } = await supabase.from("projects").select();
     return {
         props: {
