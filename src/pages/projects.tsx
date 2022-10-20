@@ -8,64 +8,59 @@ import Footer from "@components/footer/Footer";
 import AboutItemLayout from "@components/layout/AboutItemLayout";
 import HomeLayout from "@components/layout/BaseLayout";
 import ScrollSuggestor from "@components/ScrollSuggestor";
+import { createClient } from "@supabase/supabase-js";
+import { IProject } from "models";
 
-const HomeWrapper = styled.div`
-  flex-grow: 1;
-`;
+///supabase data
+const supabaseUrl = "https://crwskcfvwowttsaqytfn.supabase.co";
+const supabaseKey =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNyd3NrY2Z2d293dHRzYXF5dGZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjYyNzA2NDIsImV4cCI6MTk4MTg0NjY0Mn0.G_BT4kdIgAAViyC5XFjOnibwn66tBBvFEU9xw5EY1xU";
 
-const StyledImage = styled(Image)`
-  z-index: -1;
-`;
+const supabase = createClient(supabaseUrl, supabaseKey!);
 
-const ImageWrapper = styled.div`
-  position: absolute;
-  height: 100%;
-  width: 800px;
-  right: 0;
-`;
+/// types for the project widgets
+interface ProjectsPageProps {
+    projects: IProject[];
+}
 
-const HomeSection = styled.section`
-  height: 100vh;
-`;
+interface ProjectPageProps {
+    projects: IProject[];
+}
 
-const AboutSection = styled.section`
-  height: 100vh;
-`;
-
-const Home: NextPage = () => {
-  return (
-    <div className="flex flex-col items-center md:flex-wrap md:flex-row ">
-      <Project
-        title="Jamboree"
-        description="Jamboree is a platform where event-organizers and consumers find together."
-      />
-      <Project
-        title="Heed"
-        description="Heed is an application for forecasting breakdowns of motorcycle components."
-      />
-      <Project
-        title="Charge"
-        description="Charge is a webapplication for calculating prices of rental properties."
-      />
-      <Project
-        title="Deets"
-        description="Deets is a system for getting further product information through QR codes."
-      />
-    </div>
-  );
+/// Projects page containing all projects 🧠
+/// data is being passed in from the getStaticProps function
+const ProjectsPage: NextPage<ProjectsPageProps> = ({
+    projects,
+}: ProjectsPageProps) => {
+    return (
+        <div className="flex flex-col items-center md:flex-wrap md:flex-row ">
+            {projects.map((project) => (
+                <Project key={project.id} project={project} />
+            ))}
+        </div>
+    );
 };
 
-const Project = (props: any) => {
-  return (
-    <div className="m-8 block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        {props.title}
-      </h5>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
-        {props.description}
-      </p>
-    </div>
-  );
+const Project = ({ project }: { project: IProject }): JSX.Element => {
+    return (
+        <div className="m-8 block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                {project.name}
+            </h5>
+            <p className="font-normal text-gray-700 dark:text-gray-400">
+                {project.description}
+            </p>
+        </div>
+    );
 };
 
-export default Home;
+///export section 📦
+export default ProjectsPage;
+export async function getStaticProps() {
+    const { data: projects, error } = await supabase.from("projects").select();
+    return {
+        props: {
+            projects,
+        },
+    };
+}
