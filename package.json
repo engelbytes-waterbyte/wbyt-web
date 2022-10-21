@@ -6,7 +6,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "export": "next export"
     },
     "dependencies": {
         "@rive-app/react-canvas": "^3.0.1",
@@ -19,6 +20,7 @@
         "react-dom": "18.1.0",
         "react-double-marquee": "^1.1.0",
         "react-scroll": "^1.8.7",
+        "remove-trailing-slash": "^0.1.1",
         "rive-react": "^3.0.1",
         "styled-components": "^5.3.5",
         "tabler-icons-react": "^1.47.0"

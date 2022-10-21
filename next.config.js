@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const { join } = require("path");
 
 const nextConfig = {

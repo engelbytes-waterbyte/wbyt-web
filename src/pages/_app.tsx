@@ -1,15 +1,10 @@
-import type { AppProps } from "next/app";
 import styled, { ThemeProvider } from "styled-components";
-import Footer from "@components/footer/Footer";
-import AboutItemLayout from "@components/layout/AboutItemLayout";
 import { useRouter } from "next/router";
 import BaseLayout from "@components/layout/BaseLayout";
 import "@styles/globals.css";
 import "tailwindcss/tailwind.css";
-import { route } from "next/dist/server/router";
-import HomeTop from "@components/layout/HomeTop";
 import HomeLayout from "@components/layout/HomeLayout";
-import { createClient } from "@supabase/supabase-js";
+import { AppProps } from "next/dist/pages/_app";
 
 export const wbytTheme = {
     colors: {
