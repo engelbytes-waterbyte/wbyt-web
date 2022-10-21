@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const OnBoarding: NextPage = () => {
     return (
-        <div className="mr-5">
+        <div className="mr-28">
             <form>
                 <div className="grid gap-6 mb-6 md:grid-cols-2">
                     <div>
