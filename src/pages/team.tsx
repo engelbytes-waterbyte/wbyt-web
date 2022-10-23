@@ -7,26 +7,26 @@ const Team: NextPage = () => {
     return (
         <div className="flex flex-col items-center md:flex-wrap md:flex-row md:items-start">
             <TeamItem
-                name="Mixs"
-                description="Hi, I'm Michael."
+                name="Michael"
+                description="Initiator, Mitglied, Verantwortlicher und für das Frontend verantwortlich."
                 instagram="https://www.instagram.com/ungrmichael"
                 github="https://github.com/ungarmichael"
-                imageUrl="https://images.obi.at/product/DE/1500x1500/218183_1.jpg"
+                imageUrl="https://imgur.com/jbMWLyV.png"
                 role="Projektleitung"
             />
             <TeamItem
-                name="Tops"
-                description="Hi, I'm Tops. I bin der der hust(l)et."
+                name="Tobias"
+                description="Initiator, Mitglied und in der Forschung tätig."
                 instagram="https://www.instagram.com/tobe.w69"
                 github="https://github.com/Tobi696"
                 imageUrl="https://ca.slack-edge.com/T03241P5GDD-U032LV559B6-db6553df4187-512"
                 role="Projektmitarbeiter"
             />
             <TeamItem
-                name="noassl"
+                name="Janik"
                 role="Nachwuchskodierer"
                 imageUrl="https://avatars.githubusercontent.com/u/46902503?v=4"
-                description='Starred in "ongschissena donut"'
+                description="Mitglied, Gelehrter und fleißiger Open-Source-Contributor"
                 github="https://github.com/littlegamer757"
                 instagram="https://www.instagram.com/janikn.15/"
             />
