@@ -57,6 +57,15 @@ module.exports = {
         },
         autoprefixer: {},
     },
+    serverRuntimeConfig: {
+        // Will only be available on the server side
+        mySecret: "secret",
+        secondSecret: process.env.SUPABASE_KEY, // Pass through env variables
+    },
+    env: {
+        SUPABASE_KEY: process.env.SUPABASE_KEY,
+    },
+
     images: {
         loader: "akamai",
         path: "",

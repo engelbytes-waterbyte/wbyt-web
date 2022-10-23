@@ -1,12 +1,95 @@
 import Emoji from "@components/utils/Emoji";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
+import e from "express";
+import { IBlog } from "models";
 import { NextPage } from "next";
+import getConfig from "next/config";
 import Link from "next/link";
+import { FormEvent, FormEventHandler, useState } from "react";
 
-const BlogPage: NextPage = () => {
+interface BlogPageProps {
+    blogs: IBlog[];
+    supabase: SupabaseClient;
+}
+
+const BlogPage: NextPage<BlogPageProps> = ({ blogs }: BlogPageProps) => {
+    // const [blogs, setBlogs] = useState<IBlog[]>(blogs);
+    const { serverRuntimeConfig } = getConfig();
+    const [text, setText] = useState<string>("");
+    const supabaseUrl = "https://crwskcfvwowttsaqytfn.supabase.co";
+    const supabaseKey = process.env.SUPABASE_KEY;
+    const supabase = createClient(supabaseUrl, supabaseKey!);
+
+    const blogsubmit = (event: FormEvent): void => {
+        event.preventDefault();
+
+        supabase
+            .from("blogs")
+            .insert([{ name: "a blog", content: text }])
+            .then((res) => {
+                console.log(res);
+            });
+    };
+
     return (
-        <div className="flex flex-col items-center md:flex-wrap md:flex-row md:items-start">
-            asdjlfk
-        </div>
+        <section>
+            <form onSubmit={blogsubmit}>
+                <div className="mb-6">
+                    <label
+                        htmlFor="message"
+                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                    >
+                        Your message
+                    </label>
+                    <textarea
+                        id="message"
+                        rows={4}
+                        onChange={(e) => setText(e.target.value)}
+                        className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Your message..."
+                    ></textarea>
+                </div>
+
+                <div className="flex items-start mb-6">
+                    <div className="flex items-center h-5">
+                        <input
+                            id="remember"
+                            type="checkbox"
+                            value=""
+                            className="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+                            required
+                        />
+                    </div>
+                    <label
+                        htmlFor="remember"
+                        className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                    >
+                        I agree with the{" "}
+                        <Link href="/terms" passHref>
+                            <span className="text-blue-600 hover:underline dark:text-blue-500">
+                                terms and conditions
+                            </span>
+                        </Link>
+                        .
+                    </label>
+                </div>
+                <button
+                    type="submit"
+                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                    Submit
+                </button>
+            </form>
+            <div className="flex flex-col items-center md:flex-wrap md:flex-row md:items-start">
+                {blogs.map((blog) => (
+                    <BlogItem
+                        key={blog.id}
+                        name={blog.name}
+                        content={blog.content}
+                    />
+                ))}
+            </div>
+        </section>
     );
 };
 
@@ -36,37 +119,16 @@ const BlogNotFound: NextPage = () => {
     );
 };
 
-const BlogItem = () => {
+const BlogItem = ({ name, content }: { name: string; content: string }) => {
     return (
         <div>
             <div className="p-6 m-8 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2021
+                    {name}
                 </h5>
-
                 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of
-                    2021 so far, in reverse chronological order.
+                    {content}
                 </p>
-                <a
-                    href="#"
-                    className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                    Read more
-                    <svg
-                        aria-hidden="true"
-                        className="ml-2 -mr-1 w-4 h-4"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            fillRule="evenodd"
-                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                            clipRule="evenodd"
-                        ></path>
-                    </svg>
-                </a>
             </div>
         </div>
     );
@@ -74,11 +136,16 @@ const BlogItem = () => {
 
 ///export section 📦
 export default BlogPage;
-// export async function getStaticProps() {
-//     const { data: projects, error } = await supabase.from("projects").select();
-//     return {
-//         props: {
-//             projects,
-//         },
-//     };
-// }
+export async function getStaticProps() {
+    ///supabase data
+    const supabaseUrl = "https://crwskcfvwowttsaqytfn.supabase.co";
+    const supabaseKey = process.env.SUPABASE_KEY;
+    const supabase = createClient(supabaseUrl, supabaseKey!);
+
+    const { data: blogs, error } = await supabase.from("blogs").select();
+    return {
+        props: {
+            blogs,
+        },
+    };
+}

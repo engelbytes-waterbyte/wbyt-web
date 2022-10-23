@@ -45,12 +45,12 @@ const NavItems = [
         href={"/team"}
         icon={<Alien style={iconStyle} size={iconSize} />}
     />,
-    //   <NavItem
-    //     key="blog"
-    //     name="Blog"
-    //     href={"/blog"}
-    //     icon={<News style={iconStyle} size={iconSize} />}
-    //   />,
+    <NavItem
+        key="blog"
+        name="Blog"
+        href={"/blog"}
+        icon={<News style={iconStyle} size={iconSize} />}
+    />,
     //   <NavItem
     //     key="events"
     //     name="Events"

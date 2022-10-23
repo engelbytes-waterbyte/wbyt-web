@@ -67,6 +67,7 @@ const TopBar: NextPage<Props> = ({ heading, subheading, homeStyle }) => {
           Login
         </button> */}
                 {/* <WbytBtn text="Mitglied werden" /> */}
+
                 <Link href="/onboarding" passHref>
                     <button
                         type="button"

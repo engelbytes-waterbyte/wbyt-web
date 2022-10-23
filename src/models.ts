@@ -3,3 +3,9 @@ export interface IProject {
     name: string;
     description: string;
 }
+
+export interface IBlog {
+    id: number;
+    name: string;
+    content: string;
+}

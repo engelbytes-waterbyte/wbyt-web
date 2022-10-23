@@ -37,7 +37,7 @@ const routes: Route[] = [
         subheading: "Things we are building",
     },
     { path: "/team", heading: "Team", subheading: "Get to know the crew" },
-    { path: "/blog", heading: "Blog", subheading: "Get info out ajsfdlk" },
+    { path: "/blog", heading: "Blog", subheading: "What is going on" },
     {
         path: "/onboarding",
         heading: "Onboarding",
