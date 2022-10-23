@@ -8,27 +8,47 @@ const Team: NextPage = () => {
         <div className="flex flex-col items-center md:flex-wrap md:flex-row md:items-start">
             <TeamItem
                 name="Michael"
-                description="Initiator, Mitglied, Verantwortlicher und für das Frontend verantwortlich."
+                description="Initiator, Verantwortlicher und für das Frontend zuständig."
                 instagram="https://www.instagram.com/ungrmichael"
                 github="https://github.com/ungarmichael"
                 imageUrl="https://imgur.com/jbMWLyV.png"
-                role="Projektleitung"
+                role="Projektleitung, Member"
             />
             <TeamItem
                 name="Tobias"
-                description="Initiator, Mitglied und in der Forschung tätig."
+                role="Projektmitarbeiter, Member"
+                description="Initiator und in der Forschung tätig."
                 instagram="https://www.instagram.com/tobe.w69"
                 github="https://github.com/Tobi696"
                 imageUrl="https://ca.slack-edge.com/T03241P5GDD-U032LV559B6-db6553df4187-512"
-                role="Projektmitarbeiter"
+            />
+            <TeamItem
+                name="Sandro"
+                description="Initiator und Dokumentierer."
+                instagram="https://www.instagram.com/sandro_grein"
+                github="https://github.com/SandroGreinecker"
+                imageUrl="https://i.imgur.com/rz8wqy7.jpg"
+                role="Projektmitarbeiter, Member"
             />
             <TeamItem
                 name="Janik"
-                role="Nachwuchskodierer"
+                role="Nachwuchskodierer, Member"
                 imageUrl="https://avatars.githubusercontent.com/u/46902503?v=4"
-                description="Mitglied, Gelehrter und fleißiger Open-Source-Contributor"
+                description="Gelehrter und fleißiger Open-Source-Contributor"
                 github="https://github.com/littlegamer757"
                 instagram="https://www.instagram.com/janikn.15/"
+            />
+            <TeamItem
+                name="Andreas"
+                role="Peoplewarebeauftragter, Member"
+                description="Peopleware, Schriftführer und Entwickler."
+                imageUrl="https://i.imgur.com/6GnrBGl.jpg"
+            />
+            <TeamItem
+                name="Alexander"
+                role="Leasingmitarbeiter, Member"
+                description="Arbeitet an externen Projekten."
+                imageUrl="https://i.imgur.com/IwqcytS.png"
             />
         </div>
     );
@@ -39,8 +59,8 @@ interface TeamItemProps {
     role: string;
     imageUrl: string;
     description: string;
-    github: string;
-    instagram: string;
+    github?: string;
+    instagram?: string;
 }
 
 const TeamItem = ({
@@ -73,12 +93,16 @@ const TeamItem = ({
                     {description}
                 </p>
                 <div className="flex">
-                    <a href={github}>
-                        <BrandGithub className="mr-2" />
-                    </a>
-                    <a href={instagram}>
-                        <BrandInstagram className="mr-2" />
-                    </a>
+                    {github && (
+                        <a href={github}>
+                            <BrandGithub className="mr-2" />
+                        </a>
+                    )}
+                    {instagram && (
+                        <a href={instagram}>
+                            <BrandInstagram className="mr-2" />
+                        </a>
+                    )}
                 </div>
             </div>
         </div>
