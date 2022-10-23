@@ -1,5 +1,3 @@
-
 export const iconStyle = {
-  strokeWidth: "10%",
+    strokeWidth: "9%",
 };
-
