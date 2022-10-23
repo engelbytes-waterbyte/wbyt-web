@@ -43,6 +43,8 @@ const Team: NextPage = () => {
                 role="Peoplewarebeauftragter, Member"
                 description="Peopleware, Schriftführer und Entwickler."
                 imageUrl="https://i.imgur.com/6GnrBGl.jpg"
+                github="https://github.com/SchneckchenAndy"
+                instagram="https://www.instagram.com/andreas.aig/"
             />
             <TeamItem
                 name="Alexander"
