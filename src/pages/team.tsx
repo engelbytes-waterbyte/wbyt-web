@@ -27,7 +27,7 @@ const Team: NextPage = () => {
                 description="Initiator und Dokumentierer."
                 instagram="https://www.instagram.com/sandro_grein"
                 github="https://github.com/SandroGreinecker"
-                imageUrl="https://i.imgur.com/rz8wqy7.jpg"
+                imageUrl="https://i.imgur.com/Vz7HcMc.jpg"
                 role="Projektmitarbeiter, Member"
             />
             <TeamItem
@@ -55,14 +55,14 @@ const Team: NextPage = () => {
             <TeamItem
                 name="Florian"
                 role="Leasingmitarbeiter, Member"
-                description="Programmierer, Schwingungspraktiker und Konzentrationshomöopathe."
-                imageUrl="https://imgur.com/bCi8s3q.png"
+                description="Programmierer und orchestriert die Teams."
+                imageUrl="https://i.imgur.com/XlDQrtS.png"
             />
             <TeamItem
                 name="Fabian"
                 role="Leasingmitarbeiter, Member"
-                description="-"
-                imageUrl="https://i.imgur.com/RrEM5X0.jpg"
+                description="Programmierer und für Peopleware verantwortlich"
+                imageUrl="https://i.imgur.com/rfsb6Y5.jpg"
             />
         </div>
     );
