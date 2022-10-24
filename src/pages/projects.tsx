@@ -12,10 +12,10 @@ import { createClient } from "@supabase/supabase-js";
 import { IProject } from "models";
 
 export async function getStaticProps() {
-    const supabaseAdmin = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ADMIN_KEY!
-    );
+    // const supabaseAdmin = createClient(
+    //     process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    //     process.env.NEXT_PUBLIC_SUPABASE_ADMIN_KEY!
+    // );
 
     ///supabase data
     const supabaseUrl = "https://crwskcfvwowttsaqytfn.supabase.co";
