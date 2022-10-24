@@ -17,7 +17,7 @@ const BlogPage: NextPage<BlogPageProps> = ({ blogs }: BlogPageProps) => {
     const { serverRuntimeConfig } = getConfig();
     const [text, setText] = useState<string>("");
     const supabaseUrl = "https://crwskcfvwowttsaqytfn.supabase.co";
-    const supabaseKey = process.env.SUPABASE_KEY;
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
     const supabase = createClient(supabaseUrl, supabaseKey!);
 
     const blogsubmit = (event: FormEvent): void => {
@@ -139,7 +139,7 @@ export default BlogPage;
 export async function getStaticProps() {
     ///supabase data
     const supabaseUrl = "https://crwskcfvwowttsaqytfn.supabase.co";
-    const supabaseKey = process.env.SUPABASE_KEY;
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
     const supabase = createClient(supabaseUrl, supabaseKey!);
 
     const { data: blogs, error } = await supabase.from("blogs").select();

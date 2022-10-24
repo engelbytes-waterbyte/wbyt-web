@@ -58,12 +58,12 @@ module.exports = {
         autoprefixer: {},
     },
     serverRuntimeConfig: {
-        // Will only be available on the server side
-        mySecret: "secret",
-        secondSecret: process.env.SUPABASE_KEY, // Pass through env variables
+        NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
+        SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY,
     },
     env: {
-        SUPABASE_KEY: process.env.SUPABASE_KEY,
+        NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
+        SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY,
     },
 
     images: {

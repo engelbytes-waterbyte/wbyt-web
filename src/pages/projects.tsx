@@ -11,6 +11,25 @@ import ScrollSuggestor from "@components/ScrollSuggestor";
 import { createClient } from "@supabase/supabase-js";
 import { IProject } from "models";
 
+export async function getStaticProps() {
+    const supabaseAdmin = createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.NEXT_PUBLIC_SUPABASE_ADMIN_KEY!
+    );
+
+    ///supabase data
+    const supabaseUrl = "https://crwskcfvwowttsaqytfn.supabase.co";
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    const supabase = createClient(supabaseUrl, supabaseKey!);
+
+    const { data: projects, error } = await supabase.from("projects").select();
+    return {
+        props: {
+            projects,
+        },
+    };
+}
+
 /// types for the project widgets
 interface ProjectsPageProps {
     projects: IProject[];
@@ -49,16 +68,3 @@ const Project = ({ project }: { project: IProject }): JSX.Element => {
 
 ///export section 📦
 export default ProjectsPage;
-export async function getStaticProps() {
-    ///supabase data
-    const supabaseUrl = "https://crwskcfvwowttsaqytfn.supabase.co";
-    const supabaseKey = process.env.SUPABASE_KEY;
-    const supabase = createClient(supabaseUrl, supabaseKey!);
-
-    const { data: projects, error } = await supabase.from("projects").select();
-    return {
-        props: {
-            projects,
-        },
-    };
-}
