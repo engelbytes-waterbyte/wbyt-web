@@ -11,7 +11,7 @@ const Team: NextPage = () => {
                 description="Initiator, Verantwortlicher und für das Frontend zuständig."
                 instagram="https://www.instagram.com/ungrmichael"
                 github="https://github.com/ungarmichael"
-                imageUrl="https://imgur.com/jbMWLyV.png"
+                imageUrl="https://i.imgur.com/x1thPRR.jpg"
                 role="Projektleitung, Member"
             />
             <TeamItem
