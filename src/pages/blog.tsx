@@ -5,7 +5,7 @@ import { IBlog } from "models";
 import { NextPage } from "next";
 import getConfig from "next/config";
 import Link from "next/link";
-import { FormEvent, FormEventHandler, useState } from "react";
+import { FormEvent, FormEventHandler, useEffect, useState } from "react";
 
 interface BlogPageProps {
     blogs: IBlog[];

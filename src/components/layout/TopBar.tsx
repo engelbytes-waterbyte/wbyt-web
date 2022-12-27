@@ -43,9 +43,15 @@ interface Props {
     heading?: string;
     subheading?: string;
     homeStyle?: boolean;
+    additionalButtons?: JSX.Element;
 }
 
-const TopBar: NextPage<Props> = ({ heading, subheading, homeStyle }) => {
+const TopBar: NextPage<Props> = ({
+    heading,
+    subheading,
+    homeStyle,
+    additionalButtons,
+}) => {
     return (
         <TopBarWrapper homeStyle={homeStyle ?? false}>
             <HeadingsWrapper>
@@ -67,7 +73,7 @@ const TopBar: NextPage<Props> = ({ heading, subheading, homeStyle }) => {
           Login
         </button> */}
                 {/* <WbytBtn text="Mitglied werden" /> */}
-
+                {additionalButtons}
                 <Link href="/onboarding" passHref>
                     <button
                         type="button"
