@@ -41,7 +41,7 @@ const routes: Route[] = [
     {
         path: "/onboarding",
         heading: "Onboarding",
-        subheading: "Tell us why you want to join!",
+        subheading: "Wir sind immer auf der suche nach bewanderten Talenten!",
     },
     {
         path: "/terms",
