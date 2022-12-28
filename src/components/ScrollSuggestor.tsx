@@ -49,7 +49,9 @@ const WbytNames = [
     "die HTL-Schueler",
     "die Jungspündler",
     "die Entwickler",
-    "die Jova-Experten",
+    "die Experten",
+    "die Visionäre",
+    "die Veteranen",
     "die Diplomaten",
     "die Coder",
     "die Chillgruppe",
@@ -61,7 +63,6 @@ const WbytNames = [
     "die Stakeholder",
     "die Chilllehrlinge",
     "die Chillmeister",
-    "die Banditen",
     "die Geistlichen",
     "die Kreativen",
     "die Absoluten",
@@ -91,14 +92,18 @@ const ScrollSuggestor: React.FunctionComponent = () => {
             <div style={{ marginBottom: "30px" }}>
                 Mehr erfahren
                 <br />
-                <UeberText>
-                    über&nbsp;
+                <div className="flex items-center justify-center">
+                    <p>über&nbsp;</p>
                     <TextLoop>
                         {WbytNames.map((value, index) => {
-                            return <BlankDiv key={index}>{value}</BlankDiv>;
+                            return (
+                                <div className="break-keep" key={index}>
+                                    {value}
+                                </div>
+                            );
                         })}
                     </TextLoop>
-                </UeberText>
+                </div>
             </div>
             <Link
                 activeClass="active"
