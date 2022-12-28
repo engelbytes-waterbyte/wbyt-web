@@ -1,10 +1,33 @@
+import { sendContactForm } from "lib/api";
 import { NextPage } from "next";
 import Link from "next/link";
+import { useState } from "react";
+
+interface formValues {
+    first_name: string;
+    last_name: string;
+    company: string;
+    website: string;
+    email: string;
+    discord: string;
+}
 
 const OnBoarding: NextPage = () => {
-    const onSubmit = (e: any) => {
-        console.log(e);
+    const onSubmit = async (e: any) => {
+        e.preventDefault();
+        const tels = e.target.elements;
+        const formValues: formValues = {
+            first_name: tels.first_name.value,
+            last_name: tels.last_name.value,
+            company: tels.company.value,
+            website: tels.website.value,
+            email: tels.email.value,
+            discord: tels.discord.value,
+        };
+        await sendContactForm(formValues);
     };
+    const [state, setState] = useState({});
+    // const { values } = state;
 
     return (
         <div className="mr-28">
