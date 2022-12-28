@@ -3,6 +3,7 @@ const { join } = require("path");
 
 const nextConfig = {
     reactStrictMode: true,
+
     webpack(config) {
         config.module.rules.push({
             test: /\.svg$/,
@@ -14,6 +15,7 @@ const nextConfig = {
 
 module.exports = {
     ...nextConfig,
+    output: "standalone",
     serverRuntimeConfig: {
         NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
         SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY,

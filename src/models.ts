@@ -8,4 +8,5 @@ export interface IBlog {
     id: number;
     name: string;
     content: string;
+    imageurl: string;
 }
