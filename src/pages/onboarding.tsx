@@ -206,7 +206,7 @@ const OnBoarding: NextPage = () => {
                         className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-400"
                     >
                         I agree with the{" "}
-                        <Link href="/terms" passHref>
+                        <Link href="/terms" passHref legacyBehavior>
                             <span className="text-blue-600 hover:underline dark:text-blue-500">
                                 terms and conditions
                             </span>

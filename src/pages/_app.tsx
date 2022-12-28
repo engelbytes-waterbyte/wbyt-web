@@ -37,7 +37,11 @@ const routes: Route[] = [
         subheading: "Things we are building",
     },
     { path: "/team", heading: "Team", subheading: "Get to know the crew" },
-    { path: "/blog", heading: "Blog", subheading: "What is going on" },
+    {
+        path: "/blog",
+        heading: "Blog",
+        subheading: "Inhalte aus dem Umfeld der Waterbyte Community",
+    },
     {
         path: "/onboarding",
         heading: "Onboarding",
