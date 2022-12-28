@@ -88,12 +88,7 @@ const TeamItem = ({
     return (
         <div className="w-80 m-8 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
             <div className=" w-full h-80 relative">
-                <Image
-                    src={imageUrl}
-                    alt="büd"
-                    className="rounded-t-md"
-                    layout="fill"
-                />
+                <Image src={imageUrl} alt="büd" className="rounded-t-md" fill />
             </div>
 
             <div className="p-5">
