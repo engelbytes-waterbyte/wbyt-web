@@ -1,19 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import { useState } from "react";
-import styled from "styled-components";
-import styles from "@styles/Home.module.css";
-import Footer from "@components/footer/Footer";
-import AboutItemLayout from "@components/layout/AboutItemLayout";
-import HomeTop from "@components/layout/HomeTop";
-import ScrollSuggestor from "@components/ScrollSuggestor";
+
 import S1Foundation from "@components/aboutSections/s1-foundation";
 import S2Origin from "@components/aboutSections/s2-origin";
 import S3Activities from "@components/aboutSections/s3-activities";
 import S4Strategy from "@components/aboutSections/s4-strategy";
 import S5Contact from "@components/aboutSections/s5-contact";
-import { Element } from "react-scroll";
 
 const Home: NextPage = () => {
     return (
@@ -26,10 +18,7 @@ const Home: NextPage = () => {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
             <div className=" mb-36">
-                {/* <Element name="scrollToS1"> */}
-                {/* </Element> */}
                 <S1Foundation />
                 <S2Origin />
                 <S3Activities />
