@@ -1,3 +1,4 @@
+const { withPlugins } = require("next-compose-plugins");
 const { join } = require("path");
 
 const nextConfig = {
@@ -13,12 +14,6 @@ const nextConfig = {
 
 module.exports = {
     ...nextConfig,
-    plugins: {
-        tailwindcss: {
-            config: join(__dirname, "tailwind.config.js"),
-        },
-        autoprefixer: {},
-    },
     serverRuntimeConfig: {
         NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
         SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY,
@@ -27,7 +22,6 @@ module.exports = {
         NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
         SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY,
     },
-
     images: {
         loader: "akamai",
         path: "",
