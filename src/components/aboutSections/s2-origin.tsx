@@ -44,6 +44,10 @@ const CircleContainer = styled.div`
     top: 22%;
     transform: translate(-50%);
     left: 54%;
+    white-space: nowrap;
+    svg {
+        display: unset;
+    };
 `;
 
 const Track = styled.div`
@@ -83,7 +87,7 @@ const S2Origin = () => {
             >
                 <Austria className="absolute" />
                 <CircleContainer>
-                    <Marquee>
+                    <Marquee delay={0} childMargin={0}>
                         <StyledWbytMarquee />
                     </Marquee>
                 </CircleContainer>
