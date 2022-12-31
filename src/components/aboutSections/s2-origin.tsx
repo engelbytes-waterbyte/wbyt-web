@@ -40,14 +40,15 @@ const CircleContainer = styled.div`
     background-color: white;
     border-radius: 50%;
     overflow: hidden;
-    position: absolute;
-    top: 22%;
+    top: 95px;
+    position: relative;
+    left: 9%;
     transform: translate(-50%);
-    left: 54%;
+
     white-space: nowrap;
     svg {
         display: unset;
-    };
+    }
 `;
 
 const Track = styled.div`
@@ -85,12 +86,14 @@ const S2Origin = () => {
                 className="flex justify-center relative overflow-hidden "
                 style={{ height: "500px" }}
             >
-                <Austria className="absolute" />
-                <CircleContainer>
-                    <Marquee delay={0} childMargin={0}>
-                        <StyledWbytMarquee />
-                    </Marquee>
-                </CircleContainer>
+                <div className=" min-w-[900px] flex justify-center relative overflow-clip">
+                    <Austria className="absolute" />
+                    <CircleContainer>
+                        <Marquee delay={0} childMargin={0}>
+                            <StyledWbytMarquee />
+                        </Marquee>
+                    </CircleContainer>
+                </div>
             </div>
 
             <DescriptionContainer>

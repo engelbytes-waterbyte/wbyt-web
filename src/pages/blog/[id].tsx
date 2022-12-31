@@ -5,14 +5,14 @@ import getConfig from "next/config";
 import router from "next/router";
 import { useState } from "react";
 
-const BlogPage: NextPage<any> = ({ blog }: any) => {
+function BlogPage({ blog }: { blog: IBlog }) {
     return (
         <div>
-            <h1 className="font-bold text-3xl">{blog.name}</h1>
-            <h2>{blog.content}</h2>
+            <h1 className="font-bold text-3xl">{blog?.name}</h1>
+            <h2 className="text-lg mt-6">{blog?.content}</h2>
         </div>
     );
-};
+}
 
 export default BlogPage;
 
