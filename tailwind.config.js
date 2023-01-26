@@ -7,7 +7,11 @@ module.exports = {
     join(__dirname, "./src/**/*.{js,ts,jsx,tsx}"),
     "./node_modules/flowbite/**/*.js",
   ],
+
   theme: {
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+    },
     extend: {
       colors: {
         blue: {
