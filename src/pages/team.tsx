@@ -47,7 +47,7 @@ const Team: NextPage = () => {
                 cose="OAGNA"
                 role="Peoplewarebeauftragter, Member"
                 description="Peopleware, Schriftführer und Entwickler."
-                imageUrl="https://i.imgur.com/6GnrBGl.jpg"
+                imageUrl="https://i.imgur.com/QIuBtfG.jpg"
                 github="https://github.com/SchneckchenAndy"
                 instagram="https://www.instagram.com/andreas.aig/"
             />
@@ -56,22 +56,30 @@ const Team: NextPage = () => {
                               cose="SHXL"
                 role="Leasingmitarbeiter, Member"
                 description="Arbeitet an externen Projekten."
-                imageUrl="https://i.imgur.com/IwqcytS.png"
+                imageUrl="https://i.imgur.com/ZvRF8pI.jpg"
             />
             <TeamItem
                 name="Florian"
                                             cose="NODLA"
                 role="Leasingmitarbeiter, Member"
                 description="Programmierer und orchestriert die Teams."
-                imageUrl="https://i.imgur.com/XlDQrtS.png"
+                imageUrl="https://i.imgur.com/eCOT1uz.jpg"
             />
             <TeamItem
                 name="Fabian"
                 cose="FISCHA"
                 role="Leasingmitarbeiter, Member"
                 description="Programmierer und für Peopleware verantwortlich"
-                imageUrl="https://i.imgur.com/rfsb6Y5.jpg"
+                imageUrl="https://i.imgur.com/W2EIScD.jpg"
             /> 
+            <TeamItem
+              name="Simon"
+              cose="SIEMENS"
+              role="Stakeholder, Infrastruktur"
+              description="Ist an dem Erfolg des Vereins interessiert und stellt uns Hardware zur Verfügung"
+              imageUrl="https://i.imgur.com/nqNPmat.jpg"
+              />
+        
     </div>
   );
 };
