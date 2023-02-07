@@ -33,8 +33,9 @@ const Team: NextPage = () => {
         imageUrl="https://i.imgur.com/KdgFyTn.jpg"
         role="Projektmitarbeiter, Member"
       />
-      {/* <TeamItem
+       <TeamItem
                 name="Janik"
+                cose="NOAßL"
                 role="Nachwuchskodierer, Member"
                 imageUrl="https://avatars.githubusercontent.com/u/46902503?v=4"
                 description="Gelehrter und fleißiger Open-Source-Contributor"
@@ -43,6 +44,7 @@ const Team: NextPage = () => {
             />
             <TeamItem
                 name="Andreas"
+                cose="OAGNA"
                 role="Peoplewarebeauftragter, Member"
                 description="Peopleware, Schriftführer und Entwickler."
                 imageUrl="https://i.imgur.com/6GnrBGl.jpg"
@@ -51,22 +53,25 @@ const Team: NextPage = () => {
             />
             <TeamItem
                 name="Alexander"
+                              cose="SHXL"
                 role="Leasingmitarbeiter, Member"
                 description="Arbeitet an externen Projekten."
                 imageUrl="https://i.imgur.com/IwqcytS.png"
             />
             <TeamItem
                 name="Florian"
+                                            cose="NODLA"
                 role="Leasingmitarbeiter, Member"
                 description="Programmierer und orchestriert die Teams."
                 imageUrl="https://i.imgur.com/XlDQrtS.png"
             />
             <TeamItem
                 name="Fabian"
+                cose="FISCHA"
                 role="Leasingmitarbeiter, Member"
                 description="Programmierer und für Peopleware verantwortlich"
                 imageUrl="https://i.imgur.com/rfsb6Y5.jpg"
-            /> */}
+            /> 
     </div>
   );
 };
