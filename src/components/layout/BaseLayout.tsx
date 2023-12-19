@@ -9,40 +9,40 @@ import TopBar from "./TopBar";
 import { Route } from "@pages/_app";
 
 const BaseLayoutWrapper = styled.div`
-    display: flex;
+	display: flex;
 `;
 
 const ChildrenWrapper = styled.div`
-    min-height: 100vh;
-    flex: 1;
+	min-height: 100vh;
+	flex: 1;
 `;
 
 type Props = {
-    children: React.ReactNode;
-    children2: React.ReactNode;
-    route?: Route;
+	children: React.ReactNode;
+	children2: React.ReactNode;
+	route?: Route;
 };
 
 const BaseLayout: NextPage<Props> = ({ children, children2, route }) => {
-    const router = useRouter();
+	const router = useRouter();
 
-    return (
-        <div>
-            <BaseLayoutWrapper>
-                <NavBar />
-                <ChildrenWrapper>
-                    <TopBar
-                        homeStyle={router.pathname == "/"}
-                        heading={route?.heading ?? ""}
-                        subheading={route?.subheading ?? ""}
-                    />
-                    {children}
-                </ChildrenWrapper>
-            </BaseLayoutWrapper>
-            {children2}
-            <Footer />
-        </div>
-    );
+	return (
+		<div>
+			<BaseLayoutWrapper className="mx-auto max-w-[1200px]">
+				<NavBar />
+				<ChildrenWrapper>
+					<TopBar
+						homeStyle={router.pathname == "/"}
+						heading={route?.heading ?? ""}
+						subheading={route?.subheading ?? ""}
+					/>
+					{children}
+				</ChildrenWrapper>
+			</BaseLayoutWrapper>
+			{children2}
+			<Footer />
+		</div>
+	);
 };
 
 export default BaseLayout;
