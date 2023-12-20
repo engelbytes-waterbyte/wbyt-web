@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import Link from "next/link";
 import styled from "styled-components";
 import LogoSmall from "@assets/logos/logo-without-text.svg";
+import Image from "next/image";
 
 const TopBarWrapper = styled.div<{ homeStyle: boolean }>`
 	display: flex;
@@ -60,11 +61,11 @@ const TopBar: NextPage<Props> = ({
 			<HeadingsWrapper>
 				{!homeStyle ? (
 					<div className="flex justify-center items-center  shrink-0">
-						<div className="shrink-0 sm:mr-2 mt-2 md:hidden scale-75   -ml-4">
-							<LogoSmall />
+						<div className="shrink-0 md:hidden h-[40px] w-[40px] relative mr-4">
+							<Image alt={""} src="/logo-without-text.svg" fill />
 						</div>
 						<div className="h-fit">
-							<h1 className="font-bold text-[1.5em] md:text-[1.8em]">
+							<h1 className="font-bold text-[1.3em] md:text-[1.8em]">
 								{heading}
 							</h1>
 							<h2 className="text-gray-600 font-bold text-[1em] md:text-[1.4em]">

@@ -10,6 +10,7 @@
         "export": "next export"
     },
     "dependencies": {
+        "@heroicons/react": "^2.1.1",
         "@rive-app/react-canvas": "^3.0.34",
         "@supabase/supabase-js": "^2.2.2",
         "@types/nodemailer": "^6.4.7",
@@ -25,6 +26,7 @@
         "react-dom": "18.2.0",
         "react-double-marquee": "^1.1.0",
         "react-scroll": "^1.8.9",
+        "react-use-downloader": "^1.2.4",
         "remove-trailing-slash": "^0.1.1",
         "rive-react": "^3.0.34",
         "styled-components": "^5.3.6",

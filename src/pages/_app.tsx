@@ -35,6 +35,11 @@ export interface Route {
 const routes: Route[] = [
 	{ path: "/", heading: "Home", subheading: "Welcome to WBYT" },
 	{
+		path: "/projects/deets",
+		heading: "Deets",
+		subheading: "Digitales Produktinformationssystem",
+	},
+	{
 		path: "/projects",
 		heading: "Projects",
 		subheading: "Things we are building",
@@ -54,6 +59,11 @@ const routes: Route[] = [
 		path: "/terms",
 		heading: "Terms and Conditions",
 		subheading: "",
+	},
+	{
+		path: "/charge",
+		heading: "Charge",
+		subheading: "Mietverträge",
 	},
 ];
 
