@@ -6,6 +6,8 @@ import "tailwindcss/tailwind.css";
 import HomeLayout from "@components/layout/HomeLayout";
 import { AppProps } from "next/dist/pages/_app";
 import { Inter } from "next/font/google";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -73,19 +75,21 @@ function WaterbyteWeb({ Component, pageProps }: AppProps): JSX.Element {
 		(x) => route.pathname.includes(x.path) && x.path != "/"
 	);
 	return (
-		<div className={inter.className}>
-			<ThemeProvider theme={wbytTheme}>
-				{route.pathname == "/" ? (
-					<HomeLayout>
-						<Component {...pageProps} />
-					</HomeLayout>
-				) : (
-					<BaseLayout route={routeObjOtherThanHome!} children2={""}>
-						<Component {...pageProps} />
-					</BaseLayout>
-				)}
-			</ThemeProvider>
-		</div>
+		<Suspense fallback={<Loading />}>
+			<div className={inter.className}>
+				<ThemeProvider theme={wbytTheme}>
+					{route.pathname == "/" ? (
+						<HomeLayout>
+							<Component {...pageProps} />
+						</HomeLayout>
+					) : (
+						<BaseLayout route={routeObjOtherThanHome!} children2={""}>
+							<Component {...pageProps} />
+						</BaseLayout>
+					)}
+				</ThemeProvider>
+			</div>
+		</Suspense>
 	);
 }
 

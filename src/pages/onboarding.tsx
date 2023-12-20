@@ -1,4 +1,4 @@
-import { sendContactForm } from "lib/api";
+import { sendContactForm } from "@pages/lib/api";
 import { NextPage } from "next";
 import Link from "next/link";
 import { useState } from "react";
