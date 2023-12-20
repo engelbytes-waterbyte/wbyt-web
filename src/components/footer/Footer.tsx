@@ -134,7 +134,7 @@ const Footer = () => {
 			<div className="sm:flex sm:items-center sm:justify-between">
 				<span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
 					© 2021 - {new Date().getFullYear()}{" "}
-					<a href="https://waterbyte.studio/" className="hover:underline">
+					<a href="https://waterbyte.club/" className="hover:underline">
 						Waterbyte™
 					</a>
 					. All Rights Reserved.{" "}
@@ -251,7 +251,7 @@ const Footer = () => {
 		//     <div>
 		//       <FooterHeader>Contact</FooterHeader>
 		//       <p>+43 677 614 514 90</p>
-		//       <p>contact@waterbyte.studio</p>
+		//       <p>contact@waterbyte.club</p>
 		//       <p>Erreichbar? Meistens.</p>
 		//     </div>
 
