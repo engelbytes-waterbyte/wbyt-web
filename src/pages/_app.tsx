@@ -43,10 +43,10 @@ const routes: Route[] = [
 	},
 	{
 		path: "/projects",
-		heading: "Projects",
-		subheading: "Things we are building",
+		heading: "Projekte",
+		subheading: "Was wir bisher gebaut haben ...",
 	},
-	{ path: "/team", heading: "Team", subheading: "Get to know the crew" },
+	{ path: "/team", heading: "Team", subheading: "Die Mitglieder des Vereins" },
 	{
 		path: "/blog",
 		heading: "Blog",

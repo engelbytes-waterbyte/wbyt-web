@@ -45,41 +45,46 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({
 	const router = useRouter();
 	return (
 		<div className="flex flex-col items-center md:flex-wrap md:flex-row ">
-			<div
-				className=" w-full h-fit-content p-4 box-border"
-				onClick={(e) => {
-					e.preventDefault();
-					router.push("/projects/charge");
+			<Project
+				project={{
+					id: 1,
+					name: "charge",
+					categories: ["vue.js", "golang", "sora"],
+					heading: "Charge - SYP Projekt an der HTL Grieskirchen",
+					description: "lkajsdf",
+					year: "2021",
 				}}
-			>
-				<div className=" relative w-full h-[400px] overflow-hidden rounded-t-xl rounded-l-xl">
-					<Image
-						alt="bert"
-						className="relative left-0 object-cover object-left"
-						src="/charge.png"
-						fill
-					/>
-				</div>
-				<h1 className="font-bold text-xl mt-6">
-					Choage - SYP Projekt an der HTL Grieskirchen
-				</h1>
-				<h2 className="font-bold mb-6 text-lg text-gray-700">
-					Webanwendung zur Überwachung des VPIs
-				</h2>
-				<div className="flex gap-2 items-center mb-10">
-					<p className="font-bold"> 2021 </p>
-					<p className="font-bold">·</p>
-					<p className="bg-blue-400/40 rounded-full border-2 border-blue-400/90 px-4 text-blue-400 font-bold">
-						vue.js
-					</p>
-					<p className="bg-blue-400/40 rounded-full border-2 border-blue-400/90 px-4 text-blue-400 font-bold">
-						golang
-					</p>
-					<p className="bg-blue-400/40 rounded-full border-2 border-blue-400/90 px-4 text-blue-400 font-bold">
-						sora
-					</p>
-				</div>
-			</div>
+			/>
+			<Project
+				project={{
+					id: 1,
+					name: "heed",
+					categories: ["vue.js", "golang", "sora"],
+					heading: "Charge - SYP Projekt an der HTL Grieskirchen",
+					description: "lkajsdf",
+					year: "2021",
+				}}
+			/>
+			<Project
+				project={{
+					id: 1,
+					name: "filli",
+					categories: ["vue.js", "golang", "sora"],
+					heading: "Charge - SYP Projekt an der HTL Grieskirchen",
+					description: "lkajsdf",
+					year: "2021",
+				}}
+			/>
+			<Project
+				project={{
+					id: 1,
+					name: "wbyt",
+					categories: ["vue.js", "golang", "sora"],
+					heading: "Charge - SYP Projekt an der HTL Grieskirchen",
+					description: "lkajsdf",
+					year: "2021",
+				}}
+			/>
 			<div
 				className=" w-full h-fit-content p-4 box-border sm:max-w-none "
 				onClick={(e) => {
@@ -119,12 +124,6 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({
 					<p className="bg-blue-400/40 rounded-full border-2 border-blue-400/90 px-4 text-blue-400 font-bold">
 						golang
 					</p>
-					<p className="bg-blue-400/40 rounded-full border-2 border-blue-400/90 px-4 text-blue-400 font-bold">
-						Säge
-					</p>
-					<p className="bg-blue-400/40 rounded-full border-2 border-blue-400/90 px-4 text-blue-400 font-bold">
-						Akkuschrauber
-					</p>
 				</div>
 			</div>
 
@@ -136,17 +135,42 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({
 };
 
 const Project = ({ project }: { project: IProject }): JSX.Element => {
+	const router = useRouter();
 	return (
-		<div className="m-8 block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-			<h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-				{project.name}
-			</h5>
-			<p className="font-normal text-gray-700 dark:text-gray-400">
+		<div
+			className=" w-full h-fit-content p-4 box-border"
+			onClick={(e) => {
+				e.preventDefault();
+				router.push("/projects/charge");
+			}}
+		>
+			<div className=" relative w-full h-[400px] overflow-hidden rounded-t-xl rounded-l-xl">
+				<Image
+					alt="bert"
+					className="relative left-0 object-cover object-left"
+					src={`/${project.name}.png`}
+					fill
+				/>
+			</div>
+			<h1 className="font-bold text-xl mt-6">{project.heading}</h1>
+			<h2 className="font-bold mb-6 text-lg text-gray-700">
 				{project.description}
-			</p>
+			</h2>
+			<div className="flex gap-2 items-center mb-10">
+				<p className="font-bold"> 2021 </p>
+				<p className="font-bold">·</p>
+				<p className="bg-blue-400/40 rounded-full border-2 border-blue-400/90 px-4 text-blue-400 font-bold">
+					vue.js
+				</p>
+				<p className="bg-blue-400/40 rounded-full border-2 border-blue-400/90 px-4 text-blue-400 font-bold">
+					golang
+				</p>
+				<p className="bg-blue-400/40 rounded-full border-2 border-blue-400/90 px-4 text-blue-400 font-bold">
+					sora
+				</p>
+			</div>
 		</div>
 	);
 };
 
-///export section 📦
 export default ProjectsPage;

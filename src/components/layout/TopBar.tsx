@@ -97,7 +97,7 @@ const TopBar: NextPage<Props> = ({
 						type="button"
 						className="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 h-fit  font-medium rounded-lg md:text-sm text-xs px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
 					>
-						<p className="hidden md:block">Become a member</p>
+						<p className="hidden md:block">Werde jetzt Mitglied!</p>
 						<p className="block md:hidden">JOIN</p>
 					</button>
 				</Link>

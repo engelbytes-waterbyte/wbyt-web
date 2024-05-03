@@ -35,46 +35,53 @@ const NavWrapper = styled.nav`
 const NavItems = [
 	<NavItem
 		key="projects"
-		name="Projects"
+		name="Projekte"
+		deactivated={false}
 		href={"/projects"}
 		icon={<Ambulance style={iconStyle} size={iconSize} />}
 	/>,
 	<NavItem
 		key="team"
 		name="Team"
+		deactivated={false}
 		href={"/team"}
 		icon={<Alien style={iconStyle} size={iconSize} />}
 	/>,
 	<NavItem
 		key="blog"
 		name="Blog"
+		deactivated={true}
 		href={"/blog"}
 		icon={<News style={iconStyle} size={iconSize} />}
 	/>,
-	//   <NavItem
-	//     key="events"
-	//     name="Events"
-	//     href={"/events"}
-	//     icon={<Ticket style={iconStyle} size={iconSize} />}
-	//   />,
-	//   <NavItem
-	//     key="stickers"
-	//     name="Stickers"
-	//     href={"/stickers"}
-	//     icon={<Sticker style={iconStyle} size={iconSize} />}
-	//   />,
-	//   <NavItem
-	//     key="assets"
-	//     name="Assets"
-	//     href={"/assets"}
-	//     icon={<Package style={iconStyle} size={iconSize} />}
-	//   />,
-	//   <NavItem
-	//     key="store"
-	//     name="Store"
-	//     href={"/store"}
-	//     icon={<BuildingStore style={iconStyle} size={iconSize} />}
-	//   />,
+	<NavItem
+		key="events"
+		name="Events"
+		deactivated={true}
+		href={"/events"}
+		icon={<Ticket style={iconStyle} size={iconSize} />}
+	/>,
+	<NavItem
+		key="stickers"
+		name="Stickers"
+		deactivated={true}
+		href={"/stickers"}
+		icon={<Sticker style={iconStyle} size={iconSize} />}
+	/>,
+	<NavItem
+		key="assets"
+		name="Assets"
+		deactivated={true}
+		href={"/assets"}
+		icon={<Package style={iconStyle} size={iconSize} />}
+	/>,
+	<NavItem
+		key="store"
+		name="Store"
+		deactivated={true}
+		href={"/store"}
+		icon={<BuildingStore style={iconStyle} size={iconSize} />}
+	/>,
 ];
 
 const StyledLogo = styled(Logo)`
